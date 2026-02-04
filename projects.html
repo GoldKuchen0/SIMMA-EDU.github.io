@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Max Simon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav-system">
+        <div class="nav-logo">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text">MS</span>
+            <span class="logo-bracket">]</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link active">Projects</a>
+            <a href="skills.html" class="nav-link">Skills/Certificates</a>
+            <a href="experience.html" class="nav-link">Experience</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="breadcrumb">
+                <a href="index.html">home</a>
+                <span>/</span>
+                <span>projects</span>
+            </div>
+            <h1 class="page-title">Technical Projects</h1>
+            <p class="page-subtitle">Real-world implementations and system architectures</p>
+        </div>
+    </header>
+
+    <!-- Projects Grid -->
+    <main class="projects-container">
+
+        <!-- Project Filter -->
+        <div class="category-selector">
+            <label for="projectFilter" class="selector-label">Filter:</label>
+            <select id="projectFilter" class="category-dropdown">
+                <option value="all" selected>All Projects</option>
+                <option value="completed">Completed</option>
+                <option value="development">In Development</option>
+                <option value="future">Future Projects</option>
+            </select>
+        </div>
+
+        <!-- Grading Dino Project -->
+        <article class="project-detail">
+            <div class="project-header-section">
+                <div class="project-icon-large">
+                    <img src="./img/GradingDino/ProjektLogo.png" alt="Grading Dino">
+                </div>
+                <div class="project-meta">
+                    <h2 class="project-name">Grading Dino</h2>
+                    <p class="project-tagline">Secure Grade Management System</p>
+                    <p class="project-cours">Proma & Pytwo</p>
+                    <div class="project-status">
+                        <span class="status-badge status-completed">Completed</span>
+                    </div>
+                </div>
+                <div class="project-toggle">▼</div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-overview">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="overview-text">
+                        A modern grade management system designed for professors to efficiently manage 
+                        and track student grades. Built with Django and PostgreSQL, the system provides 
+                        a secure, scalable solution with comprehensive administrative features and robust 
+                        data protection.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3 class="section-heading">Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="./img/GradingDino/django.png" alt="Django" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Django</h4>
+                                <p>Python web framework with batteries-included approach</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/GradingDino/postgresql.jpg" alt="PostgreSQL" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>PostgreSQL</h4>
+                                <p>Production-ready database with ACID compliance</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/GradingDino/docker.png" alt="Docker" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Docker</h4>
+                                <p>Containerized deployment with Docker Compose</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/GradingDino/argon2.png" alt="Argon2" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Argon2</h4>
+                                <p>Advanced password hashing (University of Luxembourg)</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/GradingDino/pico.png" alt="Pico.css" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Pico.css</h4>
+                                <p>Minimalist CSS framework with semantic HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>Admin Panel</h4>
+                            <p>Complete grade management UI without custom interface development</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>Authentication System</h4>
+                            <p>Built-in user roles, permissions, and access control</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>Security First</h4>
+                            <p>CSRF, XSS, and SQL injection protection by default</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">04</div>
+                            <h4>Server-Side Rendering</h4>
+                            <p>All validation and logic processed server-side</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">05</div>
+                            <h4>One-Command Deploy</h4>
+                            <p>System starts with single docker compose up command</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="downloads-section">
+                    <h3 class="section-heading">Downloads</h3>
+                    <div class="downloads-grid">
+                        <a href="Downloads/gradingDino/document.pdf" class="download-card" download>
+                            <div class="download-icon">📄</div>
+                            <div class="download-info">
+                                <h4 class="download-title">Documentation</h4>
+                                <p class="download-description">Project documentation (PDF)</p>
+                            </div>
+                            <div class="download-arrow">→</div>
+                        </a>
+                        <a href="img/GradingDino/ProjektLogo.png" class="download-card" download>
+                            <div class="download-icon">🖼️</div>
+                            <div class="download-info">
+                                <h4 class="download-title">Preview Image</h4>
+                                <p class="download-description">Project screenshot (PNG)</p>
+                            </div>
+                            <div class="download-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- LME Project -->
+        <article class="project-detail">
+            <div class="project-header-section">
+                <div class="project-icon-large">
+                    <img src="./img/LME/lme_logo.png" alt="LME">
+                </div>
+                <div class="project-meta">
+                    <h2 class="project-name">Luxembourg Media Engineering</h2>
+                    <p class="project-tagline">Web Development & Hosting Services</p>
+                    <p class="project-cours">PROMA</p>
+                    <div class="project-status">
+                        <span class="status-badge status-development">In Development</span>
+                    </div>
+                </div>
+                <div class="project-toggle">▼</div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-overview">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="overview-text">
+                        LME is a PROMA project offering professional web development
+                        services using Laravel. We provide comprehensive solutions including website creation,
+                        hosting, and management services for businesses and organizations. Our focus is on
+                        delivering modern, scalable web applications with reliable infrastructure.
+                    </p>
+                    <p class="overview-text" style="margin-top: 1rem; font-style: italic; color: var(--color-text-dim);">
+                        Future Vision: Building LME into a real registered company offering professional
+                        web development and hosting services to clients across Luxembourg.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3 class="section-heading">Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="./img/LME/Laravel.svg.png" alt="Laravel" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Laravel</h4>
+                                <p>PHP framework for robust web applications</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/LME/mysql.png" alt="MySQL" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>MySQL</h4>
+                                <p>Relational database management system</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/LME/coolify.png" alt="Coolify" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Coolify</h4>
+                                <p>Self-hosted deployment platform</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/LME/proxmox_logo.png" alt="Proxmox" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Proxmox VE</h4>
+                                <p>Virtualization management platform</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/LME/proxmoxBackup.jpg" alt="Proxmox Backup" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Proxmox Backup</h4>
+                                <p>Enterprise backup solution</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/LME/cloudflare.png" alt="Cloudflare" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Cloudflare</h4>
+                                <p>CDN and security services</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="./img/LME/hetzner.png" alt="Hetzner" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>Hetzner</h4>
+                                <p>Cloud hosting infrastructure provider</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Service Offerings</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>Website Creation</h4>
+                            <p>Professional Laravel-based website development</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>Web Hosting</h4>
+                            <p>Reliable hosting solutions</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>Website Management</h4>
+                            <p>Ongoing maintenance and support services</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">04</div>
+                            <h4>Custom Solutions</h4>
+                            <p>Tailored web applications for specific needs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="downloads-section">
+                    <h3 class="section-heading">Downloads</h3>
+                    <div class="downloads-grid">
+                        <a href="Downloads/lme/LME Project Proposal.pdf" class="download-card" download>
+                            <div class="download-icon">📄</div>
+                            <div class="download-info">
+                                <h4 class="download-title">Project Proposal</h4>
+                                <p class="download-description">LME project proposal (PDF)</p>
+                            </div>
+                            <div class="download-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- SSD Presentation Project -->
+        <article class="project-detail">
+            <div class="project-header-section">
+                <div class="project-icon-large">
+                    <img src="./img/ssd/ssd.png" alt="LME">
+                </div>
+                <div class="project-meta">
+                    <h2 class="project-name">SSD Presentation</h2>
+                    <p class="project-tagline">Technical Presentation on SSD Technology</p>
+                    <p class="project-cours">CLOIF</p>
+                    <div class="project-status">
+                        <span class="status-badge status-completed">Completed</span>
+                    </div>
+                </div>
+                <div class="project-toggle">▼</div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-overview">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="overview-text">
+                        A comprehensive technical presentation covering Solid State Drive (SSD) technology,
+                        architecture, and performance characteristics. The presentation explores various aspects
+                        of SSD technology including storage technology, performance metrics, and practical applications
+                        in modern computing environments.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3 class="section-heading">Tools Used</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <img src="./img/ssd/ppt-icon.png" alt="PowerPoint" class="tech-icon-img">
+                            <div class="tech-info">
+                                <h4>PowerPoint</h4>
+                                <p>Professional presentation software for creating slides</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Key Topics</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>SSD Architecture</h4>
+                            <p>Internal structure and components of SSDs</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>Performance Metrics</h4>
+                            <p>Speed comparisons and benchmarks</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>Technology Comparison</h4>
+                            <p>SSD vs HDD advantages and use cases</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">04</div>
+                            <h4>Practical Applications</h4>
+                            <p>Real-world usage scenarios and recommendations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="downloads-section">
+                    <h3 class="section-heading">Downloads</h3>
+                    <div class="downloads-grid">
+                        <a href="Downloads/ssd/SSD.pptx" class="download-card" download>
+                            <div class="download-icon">
+                                <img src="./img/ssd/ppt-icon.png" alt="PowerPoint" style="width: 40px; height: 40px; object-fit: contain;">
+                            </div>
+                            <div class="download-info">
+                                <h4 class="download-title">Presentation</h4>
+                                <p class="download-description">SSD presentation slides (PPTX)</p>
+                            </div>
+                            <div class="download-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- DFS Shared Workfolder Project -->
+        <article class="project-detail">
+            <div class="project-header-section">
+                <div class="project-icon-large">
+                    <img src="./img/dfs/icon.jpg" alt="DFS">
+                </div>
+                <div class="project-meta">
+                    <h2 class="project-name">DFS Shared Workfolder</h2>
+                    <p class="project-tagline">Windows Distributed File System Implementation</p>
+                    <p class="project-cours">OSYCL</p>
+                    <div class="project-status">
+                        <span class="status-badge status-completed">Completed</span>
+                    </div>
+                </div>
+                <div class="project-toggle">▼</div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-overview">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="overview-text">
+                        Implementation of a Windows Distributed File System (DFS) environment with shared
+                        workfolders for enterprise file management. The project demonstrates configuration
+                        of DFS Namespace and Replication services integrated with Active Directory for
+                        centralized file access and redundancy across multiple servers.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3 class="section-heading">Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🪟</div>
+                            <div class="tech-info">
+                                <h4>Windows Server</h4>
+                                <p>Server operating system platform</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">📁</div>
+                            <div class="tech-info">
+                                <h4>DFS Namespace</h4>
+                                <p>Unified file system namespace structure</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔄</div>
+                            <div class="tech-info">
+                                <h4>DFS Replication</h4>
+                                <p>Multi-master replication engine</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔐</div>
+                            <div class="tech-info">
+                                <h4>Active Directory</h4>
+                                <p>Directory services and authentication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>Centralized Access</h4>
+                            <p>Unified namespace for simplified file access</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>Automatic Replication</h4>
+                            <p>Real-time file synchronization across servers</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>High Availability</h4>
+                            <p>Redundancy and failover capabilities</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">04</div>
+                            <h4>AD Integration</h4>
+                            <p>Seamless authentication and permissions management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="downloads-section">
+                    <h3 class="section-heading">Downloads</h3>
+                    <div class="downloads-grid">
+                        <a href="Downloads/dfs/Demonstration DFS.pdf" class="download-card" download>
+                            <div class="download-icon">📄</div>
+                            <div class="download-info">
+                                <h4 class="download-title">Documentation</h4>
+                                <p class="download-description">DFS demonstration guide (PDF)</p>
+                            </div>
+                            <div class="download-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CarNotes Project -->
+        <article class="project-detail">
+            <div class="project-header-section">
+                <div class="project-icon-large">
+                    <img src="./img/carnotes/carnotes.png" alt="CarNotes">
+                </div>
+                <div class="project-meta">
+                    <h2 class="project-name">CarNotes</h2>
+                    <p class="project-tagline">Vehicle Maintenance Tracking System</p>
+                    <p class="project-cours">ITTAU</p>
+                    <div class="project-status">
+                        <span class="status-badge status-completed">Completed</span>
+                    </div>
+                </div>
+                <div class="project-toggle">▼</div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-overview">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="overview-text">
+                        CarNotes is a comprehensive car management application built with Microsoft PowerApps that enables users
+                        to track vehicle maintenance, schedule appointments, and manage service intervals. The system
+                        features automated email notifications via Power Automate to remind users of upcoming
+                        maintenance tasks and SNCT (technical inspection) appointments.
+                    </p>
+                    <p class="overview-text" style="margin-top: 1rem; font-style: italic; color: var(--color-text-dim);">
+                        Future Plans: Expanding the application with additional features including expense tracking,
+                        fuel consumption monitoring, service history reports, and multi-vehicle management capabilities
+                        to provide a complete automotive management solution.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3 class="section-heading">Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">⚡</div>
+                            <div class="tech-info">
+                                <h4>PowerApps</h4>
+                                <p>Low-code application platform for custom business apps</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔄</div>
+                            <div class="tech-info">
+                                <h4>Power Automate</h4>
+                                <p>Workflow automation for email notifications</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🏢</div>
+                            <div class="tech-info">
+                                <h4>Dataverse</h4>
+                                <p>Integration with Microsoft ecosystem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>Maintenance Tracking</h4>
+                            <p>Record and manage vehicle maintenance history and notes</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>Service Intervals</h4>
+                            <p>Track maintenance intervals and schedule upcoming services</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>SNCT Appointments</h4>
+                            <p>Manage technical inspection appointments and reminders</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">04</div>
+                            <h4>Email Notifications</h4>
+                            <p>Automated reminders for upcoming maintenance via Power Automate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Python Auth.log Monitor Project -->
+        <article class="project-detail">
+            <div class="project-header-section">
+                <div class="project-icon-large">
+                    <img src="./img/python/python-icon.png" alt="Python Auth.log Monitor">
+                </div>
+                <div class="project-meta">
+                    <h2 class="project-name">Python Monitor</h2>
+                    <p class="project-tagline">Server Log Analyzer</p>
+                    <p class="project-cours">PYTWO</p>
+                    <div class="project-status">
+                        <span class="status-badge status-development">In Development</span>
+                    </div>
+                </div>
+                <div class="project-toggle">▼</div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-overview">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="overview-text">
+                        A Python-based monitoring tool that analyzes server authentication logs (auth.log)
+                        to track connection attempts. The application provides real-time visibility into who is
+                        attempting to connect to the server, which user accounts are being targeted, and the
+                        originating IP addresses of connection attempts.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3 class="section-heading">Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🐍</div>
+                            <div class="tech-info">
+                                <h4>Python</h4>
+                                <p>Core programming language for log analysis</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">📄</div>
+                            <div class="tech-info">
+                                <h4>Log Parsing</h4>
+                                <p>Real-time authentication log file monitoring</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔍</div>
+                            <div class="tech-info">
+                                <h4>Pattern Matching</h4>
+                                <p>Regular expressions for extracting connection data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>Connection Monitoring</h4>
+                            <p>Track all authentication attempts to the server</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>User Analysis</h4>
+                            <p>Identify targeted user accounts in connection attempts</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>IP Tracking</h4>
+                            <p>Display source IP addresses of connection attempts</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">04</div>
+                            <h4>Security Overview</h4>
+                            <p>Comprehensive dashboard for server access monitoring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Portfolio Website Project -->
+        <article class="project-detail">
+            <div class="project-header-section">
+                <div class="project-icon-large">
+                    <img src="./img/portfolio/portfolio.jpg" alt="Portfolio Website">
+                </div>
+                <div class="project-meta">
+                    <h2 class="project-name">Portfolio Website</h2>
+                    <p class="project-tagline">Modern Personal Portfolio Platform</p>
+                    <p class="project-cours">TBUCO</p>
+                    <div class="project-status">
+                        <span class="status-badge status-future">Future Project</span>
+                    </div>
+                </div>
+                <div class="project-toggle">▼</div>
+            </div>
+
+            <div class="project-body">
+                <div class="project-overview">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="overview-text">
+                        This portfolio website serves as a comprehensive showcase of technical skills, projects,
+                        and professional experience. Built with modern web technologies, it features a clean,
+                        responsive design with dynamic animations and an intuitive user interface.
+                    </p>
+                    <p class="overview-text" style="margin-top: 1rem; font-style: italic; color: var(--color-text-dim);">
+                        Future Enhancement: Transform the website from a static hardcoded solution into a dynamic
+                        platform powered by a database backend. This would enable content management through an admin
+                        panel, allowing projects, skills, and experience to be updated without modifying code directly.
+                        The evolution would include a proper CMS architecture with RESTful APIs for easier maintenance
+                        and scalability.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3 class="section-heading">Current Technology Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🌐</div>
+                            <div class="tech-info">
+                                <h4>HTML5</h4>
+                                <p>Semantic markup and structure</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🎨</div>
+                            <div class="tech-info">
+                                <h4>CSS3</h4>
+                                <p>Modern styling with custom properties and animations</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">⚡</div>
+                            <div class="tech-info">
+                                <h4>JavaScript</h4>
+                                <p>Interactive features and dynamic content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Key Features</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>Project Showcase</h4>
+                            <p>Dynamic filtering system for technical projects</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>Skills Display</h4>
+                            <p>Comprehensive overview of technical capabilities</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>Modern Animations</h4>
+                            <p>Smooth transitions and interactive elements</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h3 class="section-heading">Future Technology Stack</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-number">01</div>
+                            <h4>Backend Framework</h4>
+                            <p>Laravel backend architecture</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">02</div>
+                            <h4>Database</h4>
+                            <p>MySQL for content management</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-number">03</div>
+                            <h4>Admin Panel</h4>
+                            <p>CMS interface for easy content updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
