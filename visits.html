@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visits & Events | Max Simon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-system">
+        <div class="nav-logo">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text">MS</span>
+            <span class="logo-bracket">]</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="skills.html" class="nav-link">Skills/Certificates</a>
+            <a href="experience.html" class="nav-link">Experience</a>
+            <a href="visits.html" class="nav-link active">Visits & Events</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="flyer.html" class="nav-link">Flyer</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="breadcrumb">
+                <a href="index.html">home</a>
+                <span>/</span>
+                <span>visits & events</span>
+            </div>
+            <h1 class="page-title">Visits & Events</h1>
+            <p class="page-subtitle">Company visits, events & training</p>
+        </div>
+    </header>
+
+    <!-- Visits Container -->
+    <main class="experience-container">
+
+        <!-- Category Selector -->
+        <div class="category-selector">
+            <label for="visitsCategory" class="selector-label">Category:</label>
+            <select id="visitsCategory" class="category-dropdown">
+                <option value="all" selected>All</option>
+                <option value="visit">Visits</option>
+                <option value="training">Training</option>
+                <option value="external">External</option>
+            </select>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+
+            <!-- 2026 Yves Schlüter – Interview Simulation -->
+            <div class="timeline-item" data-category="external">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2026 - Interview Simulation with Yves Schlüter</h3>
+                        <span class="timeline-duration">Semester 1</span>
+                    </div>
+                    <p class="timeline-location">Lycée Guillaume Kroll, Esch-Alzette</p>
+                    <ul class="timeline-details">
+                        <li>External guest Yves Schlüter, a former Post Luxembourg employee, visited our class</li>
+                        <li>Conducted a mock job interview simulation and reviewed our cover letters and CVs</li>
+                        <li>Received personalized feedback on improving the layout and presentation of the CV</li>
+                        <li>Learned how to confidently answer critical and challenging interview questions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Guy Marong – CV & Interview Preparation -->
+            <div class="timeline-item" data-category="external">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2025/26 - CV & Interview Preparation with Guy Marong</h3>
+                        <span class="timeline-duration">Semester 1</span>
+                    </div>
+                    <p class="timeline-location">Lycée Guillaume Kroll, Esch-Alzette</p>
+                    <ul class="timeline-details">
+                        <li>External guest <a href="https://www.linkedin.com/in/guymarong/" target="_blank" rel="noopener">Guy Marong</a> accompanied our class throughout the entire first semester</li>
+                        <li>Guided us on how to properly structure an English CV</li>
+                        <li>Taught techniques for preparing and presenting oneself in a professional job interview</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NTT Luxembourg – Interview Simulation -->
+            <div class="timeline-item" data-category="external">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2025 - Interview Simulation with NTT Luxembourg</h3>
+                        <span class="timeline-duration">Semester 1</span>
+                    </div>
+                    <p class="timeline-location">Lycée Guillaume Kroll, Esch-Alzette</p>
+                    <ul class="timeline-details">
+                        <li>Applied CV and interview skills from Guy Marong's sessions in a real-world mock interview with NTT Luxembourg</li>
+                        <li>Gained practical experience in a professional interview setting with an actual company</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2026 Luxembourg Army Visit -->
+            <div class="timeline-item" data-category="visit">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2026 - Luxembourg Army Visit</h3>
+                        <span class="timeline-duration">March</span>
+                    </div>
+                    <p class="timeline-location">Luxembourg Army, Luxembourg</p>
+                    <ul class="timeline-details">
+                        <li>Scheduled military facility tour</li>
+                        <li>Exploration of military technology and infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2026 LuxConnect Visit -->
+            <div class="timeline-item" data-category="visit">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2026 - LuxConnect Visit</h3>
+                        <span class="timeline-duration">January</span>
+                    </div>
+                    <p class="timeline-location">LuxConnect, Luxembourg</p>
+                    <ul class="timeline-details">
+                        <li>Data center facility tour and inspection</li>
+                        <li>Learned about data center infrastructure and operations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- House of Entrepreneurship Course -->
+            <div class="timeline-item" data-category="training">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2026 - House of Entrepreneurship - Online Course</h3>
+                        <span class="timeline-duration">January</span>
+                    </div>
+                    <p class="timeline-location">House of Entrepreneurship, Luxembourg</p>
+                    <ul class="timeline-details">
+                        <li>Completed online course on business creation and entrepreneurship</li>
+                        <li>Learned fundamentals of starting and managing a company</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2025 ARHS Group Visit -->
+            <div class="timeline-item" data-category="visit">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2026 - ARHS Group Visit – AWS re:Invent re:cap</h3>
+                        <span class="timeline-duration">January 23 – 24</span>
+                    </div>
+                    <p class="timeline-location">ARHS Group, Belval, Luxembourg</p>
+                    <ul class="timeline-details">
+                        <li>Attended AWS re:Invent re:cap event: "From Las Vegas to Belval"</li>
+                        <li>Overview of the latest AWS announcements and innovations from re:Invent</li>
+                        <li>Insights into cloud computing trends and AWS services</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Microsoft AZ-040 Training -->
+            <div class="timeline-item" data-category="external">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">2025 - Microsoft Official Training – AZ-900</h3>
+                        <span class="timeline-duration">2 Days</span>
+                    </div>
+                    <p class="timeline-location">Lycée Guillaume Kroll, Esch-Alzette</p>
+                    <ul class="timeline-details">
+                        <li>External trainer Xavier Nix from <strong>Deep</strong> visited our class for two full days of in-person instruction</li>
+                        <li>Course: AZ-900 Microsoft Azure Fundamentals</li>
+                        <li>Covered core cloud concepts, Azure services, and pricing</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-bracket">[</span>
+                    <span>MS</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <p class="footer-tagline">Cloud Computing Student & Infrastructure Enthusiast based in Luxembourg.</p>
+                <div class="footer-meta">
+                    <span class="footer-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.314-2.686-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/></svg>
+                        Luxembourg
+                    </span>
+                    <span class="footer-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        maxs4114@proton.me
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <p class="footer-section-title">Contact</p>
+                <a href="mailto:maxs4114@proton.me" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    maxs4114@proton.me
+                </a>
+                <a href="https://www.linkedin.com/in/max-simon-230757387/" target="_blank" rel="noopener" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="9" x2="7" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="6.5" r="1" fill="currentColor"/><path d="M10 9v5M10 9c0 0 .8-1.5 3-1.5 1.5 0 2 1 2 2.5V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    linkedin.com/in/max-simon-230757387
+                </a>
+            </div>
+
+            <div class="footer-qr-section">
+                <p class="footer-section-title">LinkedIn</p>
+                <div class="footer-qr-wrapper">
+                    <div id="footer-linkedin-qr"></div>
+                </div>
+                <p class="footer-qr-label">Scan to connect</p>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Max Simon · BTS Cloud Computing</p>
+            <nav class="footer-nav">
+                <a href="projects.html" class="footer-nav-link">Projects</a>
+                <a href="skills.html" class="footer-nav-link">Skills</a>
+                <a href="experience.html" class="footer-nav-link">Experience</a>
+                <a href="visits.html" class="footer-nav-link">Visits & Events</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+                <a href="flyer.html" class="footer-nav-link">Flyer</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        new QRCode(document.getElementById('footer-linkedin-qr'), {
+            text: 'https://www.linkedin.com/in/max-simon-230757387/',
+            width: 110,
+            height: 110,
+            colorDark: '#00FFA3',
+            colorLight: '#0A0E1A',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // Category filter
+        const select = document.getElementById('visitsCategory');
+        const items = document.querySelectorAll('.timeline-item');
+        select.addEventListener('change', () => {
+            const val = select.value;
+            items.forEach(item => {
+                item.style.display = (val === 'all' || item.dataset.category === val) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

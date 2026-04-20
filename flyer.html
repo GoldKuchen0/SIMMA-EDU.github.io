@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer | Max Simon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        /* ── VARIABLES ── */
+        :root {
+            --bg:        #0A0E1A;
+            --surface:   #141824;
+            --border:    #262D3E;
+            --primary:   #00FFA3;
+            --text:      #E8EAF0;
+            --dim:       #8892A6;
+            --font:      'Outfit', sans-serif;
+            --mono:      'Space Mono', monospace;
+        }
+
+        /* ── RESET ── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ── SCREEN WRAPPER ── */
+        body {
+            background: var(--bg);
+            font-family: var(--font);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem 3rem;
+        }
+
+        /* ── TAB TOGGLE ── */
+        .view-toggle {
+            display: flex;
+            gap: 0;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+            width: fit-content;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: var(--dim);
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.55rem 1.4rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .toggle-btn:first-child {
+            border-right: 1px solid var(--border);
+        }
+
+        .toggle-btn.active {
+            background: var(--primary);
+            color: var(--bg);
+        }
+
+        .toggle-btn:not(.active):hover {
+            color: var(--primary);
+        }
+
+        /* ── CV VIEW ── */
+        .cv-view {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .cv-lang-switch {
+            display: flex;
+            gap: 0;
+            border: 1px solid var(--border);
+        }
+
+        .cv-lang-btn {
+            background: none;
+            border: none;
+            color: var(--dim);
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.45rem 1.2rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .cv-lang-btn:first-child { border-right: 1px solid var(--border); }
+
+        .cv-lang-btn.active {
+            background: var(--primary);
+            color: var(--bg);
+        }
+
+        .cv-lang-btn:not(.active):hover { color: var(--primary); }
+
+        .cv-frame {
+            width: 210mm;
+            height: 297mm;
+            border: 1px solid var(--border);
+        }
+
+        .cv-download-row {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .cv-dl-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--dim);
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            padding: 0.45rem 1.1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .cv-dl-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* ── BACK LINK ── */
+        .back-link {
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dim);
+            text-decoration: none;
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--primary); }
+
+        /* ── PRINT BUTTON ── */
+        .print-btn {
+            align-self: flex-end;
+            margin-bottom: 1rem;
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            padding: 0.5rem 1.25rem;
+            cursor: pointer;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: background 0.2s, color 0.2s;
+        }
+        .print-btn:hover {
+            background: var(--primary);
+            color: var(--bg);
+        }
+
+        /* ── FLYER CARD ── */
+        .flyer {
+            width: 210mm;
+            min-height: 297mm;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ── TOP ACCENT LINE ── */
+        .flyer::before {
+            content: '';
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+        }
+
+        /* ════════════════════════════
+           HEADER
+        ════════════════════════════ */
+        .flyer-header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            padding: 2rem 2.5rem 1.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-photo {
+            width: 88px;
+            height: 88px;
+            object-fit: cover;
+            object-position: top;
+            outline: 2px solid var(--primary);
+            outline-offset: 3px;
+            flex-shrink: 0;
+        }
+
+        .header-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+
+        .header-tag {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .header-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .header-title {
+            font-size: 0.9rem;
+            color: var(--dim);
+            font-weight: 400;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .header-meta span {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--dim);
+        }
+
+        .header-meta span strong {
+            color: var(--text);
+        }
+
+        /* ════════════════════════════
+           BODY GRID
+        ════════════════════════════ */
+        .flyer-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex: 1;
+        }
+
+        .col-left {
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── SECTION BLOCK ── */
+        .flyer-section {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .flyer-section:last-child {
+            border-bottom: none;
+            flex: 1;
+        }
+
+        .section-label {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ── ABOUT ── */
+        .about-text {
+            font-size: 0.82rem;
+            color: var(--dim);
+            line-height: 1.65;
+        }
+
+        .about-text strong {
+            color: var(--text);
+        }
+
+        /* ── SKILLS ── */
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .skill-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+
+        .skill-list li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* ── CERTS ── */
+        .cert-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .cert-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid var(--primary);
+        }
+
+        .cert-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .cert-issuer {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            color: var(--dim);
+        }
+
+        /* ── PROJECTS ── */
+        .project-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .project-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0 0.75rem;
+            align-items: start;
+        }
+
+        .project-dot {
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+            margin-top: 0.45rem;
+            flex-shrink: 0;
+        }
+
+        .project-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.3;
+        }
+
+        .project-desc {
+            font-size: 0.72rem;
+            color: var(--dim);
+            line-height: 1.4;
+            grid-column: 2;
+        }
+
+        /* ════════════════════════════
+           FOOTER
+        ════════════════════════════ */
+        .flyer-footer {
+            border-top: 1px solid var(--border);
+            padding: 1.25rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .footer-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--dim);
+        }
+
+        .contact-row strong {
+            color: var(--primary);
+            min-width: 60px;
+        }
+
+        .footer-qr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        #flyer-qr {
+            outline: 2px solid var(--primary);
+            outline-offset: 3px;
+            line-height: 0;
+        }
+
+        #flyer-qr img,
+        #flyer-qr canvas {
+            display: block;
+        }
+
+        .qr-caption {
+            font-family: var(--mono);
+            font-size: 0.55rem;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ════════════════════════════
+           PRINT STYLES
+        ════════════════════════════ */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background: #fff;
+                padding: 0;
+                align-items: stretch;
+            }
+
+            .back-link,
+            .print-btn {
+                display: none;
+            }
+
+            .flyer {
+                width: 210mm;
+                min-height: 297mm;
+                border: none;
+                background: #fff;
+            }
+
+            .flyer::before {
+                background: linear-gradient(90deg, #00cc82 0%, transparent 100%);
+            }
+
+            :root {
+                --bg:      #ffffff;
+                --surface: #ffffff;
+                --border:  #dde1ea;
+                --primary: #00a870;
+                --text:    #111827;
+                --dim:     #6b7280;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+    <!-- VIEW TOGGLE -->
+    <div class="view-toggle">
+        <button class="toggle-btn active" id="btn-flyer" onclick="switchView('flyer')">Flyer</button>
+        <button class="toggle-btn" id="btn-cv" onclick="switchView('cv')">CV</button>
+    </div>
+
+    <!-- FLYER VIEW -->
+    <div id="view-flyer">
+    <div class="cv-download-row" style="margin-bottom:1rem;">
+        <a href="Downloads/cv/Max_Simon_Flyer.pdf" download="Max_Simon_Flyer.pdf" class="cv-dl-btn">⬇ Download Flyer PDF</a>
+    </div>
+
+    <!-- FLYER -->
+    <div class="flyer">
+
+        <!-- HEADER -->
+        <div class="flyer-header">
+            <img src="img/me.jpg" alt="Max Simon" class="header-photo">
+            <div class="header-info">
+                <span class="header-tag">BTS Cloud Computing · Luxembourg</span>
+                <h1 class="header-name">Max Simon</h1>
+                <p class="header-title">Cloud Infrastructure &amp; Systems Student</p>
+                <div class="header-meta">
+                    <span><strong>School</strong> &nbsp;Lycée Guillaume Kroll</span>
+                    <span><strong>Year</strong> &nbsp;2025 – 2027</span>
+                    <span><strong>Location</strong> &nbsp;Luxembourg</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="flyer-body">
+
+            <!-- LEFT COLUMN -->
+            <div class="col-left">
+
+                <div class="flyer-section">
+                    <div class="section-label">About</div>
+                    <p class="about-text">
+                        I'm a <strong>Cloud Computing student</strong> with a background in IT infrastructure,
+                        passionate about hands-on technical work. My focus is on <strong>virtualization,
+                        server administration</strong>, and building reliable systems. Outside of school
+                        I co-build <strong>Luxembourg Media Engineering (LME)</strong>, a web development
+                        and hosting company.
+                    </p>
+                </div>
+
+                <div class="flyer-section">
+                    <div class="section-label">Technical Skills</div>
+                    <ul class="skill-list">
+                        <li>Microsoft Azure &amp; Cloud Services</li>
+                        <li>Proxmox VE · TrueNAS Scale</li>
+                        <li>Windows Server · Active Directory · DFS</li>
+                        <li>Ubuntu Server · Linux Administration</li>
+                        <li>Python · Django · PostgreSQL</li>
+                        <li>Laravel · PHP · MySQL</li>
+                        <li>Docker · Coolify</li>
+                        <li>Cisco Packet Tracer · Networking</li>
+                        <li>Microsoft Power Platform</li>
+                    </ul>
+                </div>
+
+                <div class="flyer-section">
+                    <div class="section-label">Languages</div>
+                    <ul class="skill-list">
+                        <li>Luxembourgish &nbsp;<span style="color:var(--dim);font-size:0.7rem;">Native</span></li>
+                        <li>German &nbsp;<span style="color:var(--dim);font-size:0.7rem;">Native</span></li>
+                        <li>English &nbsp;<span style="color:var(--dim);font-size:0.7rem;">Professional</span></li>
+                        <li>French &nbsp;<span style="color:var(--dim);font-size:0.7rem;">Intermediate</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-right">
+
+                <div class="flyer-section">
+                    <div class="section-label">Certifications</div>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <span class="cert-name">Azure Fundamentals (AZ-900)</span>
+                            <span class="cert-issuer">Microsoft Certified</span>
+                        </li>
+                        <li class="cert-item">
+                            <span class="cert-name">Word Associate (MOS)</span>
+                            <span class="cert-issuer">Microsoft Office Specialist · Nov 2025 – 2030</span>
+                        </li>
+                        <li class="cert-item">
+                            <span class="cert-name">Word Expert (MOS)</span>
+                            <span class="cert-issuer">Microsoft Office Specialist</span>
+                        </li>
+                        <li class="cert-item">
+                            <span class="cert-name">PowerPoint Associate (MOS)</span>
+                            <span class="cert-issuer">Microsoft Office Specialist · Oct 2025 – 2030</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flyer-section">
+                    <div class="section-label">Projects</div>
+                    <ul class="project-list">
+                        <li class="project-item">
+                            <div class="project-dot"></div>
+                            <span class="project-name">TrueNAS Scale Server</span>
+                            <span class="project-desc">Self-built &amp; configured NAS server with community setup and custom software stack</span>
+                        </li>
+                        <li class="project-item">
+                            <div class="project-dot"></div>
+                            <span class="project-name">Grading Dino</span>
+                            <span class="project-desc">Secure grade management system built with Django, PostgreSQL &amp; Docker</span>
+                        </li>
+                        <li class="project-item">
+                            <div class="project-dot"></div>
+                            <span class="project-name">Luxembourg Media Engineering</span>
+                            <span class="project-desc">Co-founded web dev &amp; hosting company using Laravel, Proxmox &amp; Coolify</span>
+                        </li>
+                        <li class="project-item">
+                            <div class="project-dot"></div>
+                            <span class="project-name">DFS Shared Workfolder</span>
+                            <span class="project-desc">Windows Distributed File System with AD integration and replication</span>
+                        </li>
+                        <li class="project-item">
+                            <div class="project-dot"></div>
+                            <span class="project-name">CarNotes</span>
+                            <span class="project-desc">Vehicle maintenance tracker built with Microsoft PowerApps &amp; Power Automate</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="flyer-footer">
+            <div class="footer-contacts">
+                <div class="contact-row">
+                    <strong>Email</strong>
+                    maxs4114@proton.me
+                </div>
+                <div class="contact-row">
+                    <strong>LinkedIn</strong>
+                    linkedin.com/in/max-simon-230757387
+                </div>
+                <div class="contact-row">
+                    <strong>Portfolio</strong>
+                    BTS Semester 1 · Lycée Guillaume Kroll
+                </div>
+            </div>
+            <div class="footer-qr">
+                <div id="flyer-qr"></div>
+                <span class="qr-caption">LinkedIn</span>
+            </div>
+        </div>
+
+    </div>
+    </div><!-- /view-flyer -->
+
+    <!-- CV VIEW -->
+    <div id="view-cv" class="cv-view">
+        <div style="display:flex;align-items:center;gap:1rem;width:210mm;">
+            <div class="cv-lang-switch">
+                <button class="cv-lang-btn active" id="lang-de" onclick="switchLang('de')">DE</button>
+                <button class="cv-lang-btn" id="lang-fr" onclick="switchLang('fr')">FR</button>
+            </div>
+            <div class="cv-download-row">
+                <a href="Downloads/cv/CV Simon Max 15.12.2025.pdf" download class="cv-dl-btn">⬇ Download DE</a>
+                <a href="Downloads/cv/FR CV Simon Max.pdf" download class="cv-dl-btn">⬇ Download FR</a>
+            </div>
+        </div>
+        <iframe id="cv-frame" class="cv-frame"
+            src="Downloads/cv/CV Simon Max 15.12.2025.pdf"
+            title="CV Max Simon"></iframe>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        new QRCode(document.getElementById('flyer-qr'), {
+            text: 'https://www.linkedin.com/in/max-simon-230757387/',
+            width: 80,
+            height: 80,
+            colorDark: '#0A0E1A',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        const cvFiles = {
+            de: 'Downloads/cv/CV Simon Max 15.12.2025.pdf',
+            fr: 'Downloads/cv/FR CV Simon Max.pdf'
+        };
+
+        function switchView(view) {
+            const flyerEl = document.getElementById('view-flyer');
+            const cvEl    = document.getElementById('view-cv');
+            const btnFlyer = document.getElementById('btn-flyer');
+            const btnCv    = document.getElementById('btn-cv');
+            if (view === 'flyer') {
+                flyerEl.style.display = 'block';
+                cvEl.style.display    = 'none';
+                btnFlyer.classList.add('active');
+                btnCv.classList.remove('active');
+            } else {
+                flyerEl.style.display = 'none';
+                cvEl.style.display    = 'flex';
+                btnCv.classList.add('active');
+                btnFlyer.classList.remove('active');
+            }
+        }
+
+        function switchLang(lang) {
+            document.getElementById('cv-frame').src = cvFiles[lang];
+            document.getElementById('lang-de').classList.toggle('active', lang === 'de');
+            document.getElementById('lang-fr').classList.toggle('active', lang === 'fr');
+        }
+    </script>
+</body>
+</html>

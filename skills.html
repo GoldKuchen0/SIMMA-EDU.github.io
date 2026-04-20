@@ -24,7 +24,9 @@
             <a href="projects.html" class="nav-link">Projects</a>
             <a href="skills.html" class="nav-link active">Skills/Certificates</a>
             <a href="experience.html" class="nav-link">Experience</a>
+            <a href="visits.html" class="nav-link">Visits &amp; Events</a>
             <a href="contact.html" class="nav-link">Contact</a>
+            <a href="flyer.html" class="nav-link">Flyer</a>
         </div>
     </nav>
 
@@ -36,8 +38,8 @@
                 <span>/</span>
                 <span>skills</span>
             </div>
-            <h1 class="page-title">Hard Skills</h1>
-            <p class="page-subtitle">Technical competencies and development tools</p>
+            <h1 class="page-title">Skills & Certificates</h1>
+            <p class="page-subtitle">Technical competencies and professional credentials</p>
         </div>
     </header>
 
@@ -46,107 +48,171 @@
 
         <!-- Hard Skills Section -->
         <section class="skills-section">
+            <div class="section-header" style="display:flex;align-items:flex-end;flex-wrap:wrap;gap:0.75rem;">
+                <div>
+                    <h2 class="section-title-large">Hard Skills</h2>
+                    <p class="section-description">Technical competencies and tools</p>
+                </div>
+                <label class="hs-tooltip-toggle" id="tipToggle" title="Show tooltips on hover">
+                    <input type="checkbox" id="tipCheck">
+                    <div class="hs-toggle-track"><div class="hs-toggle-thumb"></div></div>
+                    Hover Info
+                </label>
+            </div>
 
-            <div class="skills-layout">
-                
-                <!-- Web Development -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">🌐</div>
-                        <h3 class="category-title">Web Development</h3>
+            <div class="hardskills-table">
+
+                <div class="hs-header">
+                    <div class="hs-header-cell">Category</div>
+                    <div class="hs-header-cell">Tools & Technologies</div>
+                    <div class="hs-header-cell">Related Projects</div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">📦</span>
+                        <span class="hs-name">Virtualization</span>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Laravel</span>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Open-source hypervisor for running VMs and containers on bare metal">Proxmox VE</span>
+                        <span class="hs-tag" data-tip="Free VM software by Oracle for running guest operating systems">VirtualBox</span>
+                        <span class="hs-tag" data-tip="Linux-based NAS operating system for network-attached storage">TrueNAS</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
                     </div>
                 </div>
 
-                <!-- Virtualization -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">📦</div>
-                        <h3 class="category-title">Virtualization</h3>
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">💻</span>
+                        <span class="hs-name">Hardware</span>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">VirtualBox</span>
-                        <span class="skill-tag">Proxmox</span>
+                    <div class="hs-tags">
+                        <span class="hs-tag">Server Assembly</span>
+                        <span class="hs-tag" data-tip="Hardware that manages multiple disks as RAID arrays for redundancy or performance">RAID Controllers</span>
+                        <span class="hs-tag">Workstations</span>
+                        <span class="hs-tag" data-tip="Rack-mounted panel consolidating network cable connections in a server room">Patch Panels</span>
                     </div>
-                </div>
-
-                <!-- Networking -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">🔌</div>
-                        <h3 class="category-title">Networking</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Cisco Packet Tracer</span>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
                     </div>
                 </div>
 
-                <!-- Hardware -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">💻</div>
-                        <h3 class="category-title">Hardware Knowledge</h3>
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">☁️</span>
+                        <span class="hs-name">Cloud</span>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Server Hardware</span>
-                        <span class="skill-tag">Workstations</span>
-                        <span class="skill-tag">Peripherals</span>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Microsoft's cloud platform offering VMs, storage, networking and managed services">Microsoft Azure</span>
+                        <span class="hs-tag" data-tip="CDN and DNS provider with DDoS protection and global edge network">Cloudflare</span>
+                        <span class="hs-tag" data-tip="German cloud and dedicated server hosting provider">Hetzner</span>
                     </div>
-                </div>
-
-                <!-- Project Management -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">📊</div>
-                        <h3 class="category-title">Project Management</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Scrum</span>
-                        <span class="skill-tag">Kanban</span>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-azure" class="hs-project-link">Azure Meeting</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
                     </div>
                 </div>
 
-                <!-- Microsoft 365 -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">🏢</div>
-                        <h3 class="category-title">Microsoft Office 365</h3>
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🔌</span>
+                        <span class="hs-name">Networking</span>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Power Platform</span>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Cisco's network simulation tool for designing and testing network topologies">Cisco Packet Tracer</span>
                     </div>
-                </div>
-
-                <!-- Operating Systems -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">🖥️</div>
-                        <h3 class="category-title">Operating Systems</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Windows 10/11</span>
-                        <span class="skill-tag">Windows Server</span>
-                        <span class="skill-tag">Ubuntu Server</span>
-                        <span class="skill-tag">Ubuntu Desktop</span>
-                        <span class="skill-tag">Proxmox</span>
-                        <span class="skill-tag">Proxmox Backup</span>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
+                        <a href="projects.html#project-dfs" class="hs-project-link">DFS Workfolder</a>
                     </div>
                 </div>
 
-                <!-- Programming -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">⚙️</div>
-                        <h3 class="category-title">Programming</h3>
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🖥️</span>
+                        <span class="hs-name">Operating Systems</span>
                     </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
+                    <div class="hs-tags">
+                        <span class="hs-tag">Windows 10/11</span>
+                        <span class="hs-tag" data-tip="Microsoft server OS for managing users, files, AD and network services">Windows Server</span>
+                        <span class="hs-tag" data-tip="Headless Linux server OS used for hosting and infrastructure">Ubuntu Server</span>
+                        <span class="hs-tag">Ubuntu Desktop</span>
+                        <span class="hs-tag" data-tip="Proxmox VE used as the bare-metal OS for virtual infrastructure">Proxmox</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-dfs" class="hs-project-link">DFS Workfolder</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">⚙️</span>
+                        <span class="hs-name">Programming</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag">Python</span>
+                        <span class="hs-tag" data-tip="Command-line shells for scripting and automating system administration tasks">Bash / PowerShell</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-grading-dino" class="hs-project-link">Grading Dino</a>
+                        <a href="projects.html#project-python-monitor" class="hs-project-link">Python Monitor</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🌐</span>
+                        <span class="hs-name">Web Development</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag">HTML</span>
+                        <span class="hs-tag">CSS</span>
+                        <span class="hs-tag" data-tip="Server-side scripting language for building dynamic web applications">PHP</span>
+                        <span class="hs-tag">JavaScript</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-grading-dino" class="hs-project-link">Grading Dino</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-portfolio" class="hs-project-link">Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">📊</span>
+                        <span class="hs-name">Project Management</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Agile framework for iterative development using sprints and defined roles">Scrum</span>
+                        <span class="hs-tag" data-tip="Visual workflow method using boards and cards to manage tasks">Kanban</span>
+                        <span class="hs-tag" data-tip="Microsoft 365 task and project planning tool with board and list views">Microsoft Planner</span>
+                        <span class="hs-tag">Git</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-grading-dino" class="hs-project-link">Grading Dino</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-azure" class="hs-project-link">Azure Meeting</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🏢</span>
+                        <span class="hs-name">Microsoft 365</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Microsoft suite of low-code tools for apps, automation and analytics">Power Platform</span>
+                        <span class="hs-tag" data-tip="Microsoft tool for building custom business apps without traditional coding">PowerApps</span>
+                        <span class="hs-tag" data-tip="Microsoft workflow automation tool for connecting apps and services">Power Automate</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-carnotes" class="hs-project-link">CarNotes</a>
+                        <a href="projects.html#project-dfs" class="hs-project-link">DFS Workfolder</a>
                     </div>
                 </div>
 
@@ -225,6 +291,27 @@
                     </a>
                 </div>
 
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container">
+                            <img src="./certificates/word2.png" alt="Word Expert" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Word Expert</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Advanced Microsoft Word expertise with Microsoft 365 Apps.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Microsoft Office Specialist</span>
+                        <span class="cert-status active">Active</span>
+                    </div>
+                    <a href="https://www.credly.com/badges/419b661e-2a8e-4f86-8172-75f500e02651"
+                       target="_blank"
+                       class="cert-view-link">
+                        View Credential →
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -236,22 +323,6 @@
             </div>
 
             <div class="skills-layout">
-
-                <div class="skill-category certificate-card attempted-cert">
-                    <div class="category-header">
-                        <div class="cert-image-container">
-                            <img src="./certificates/word2.png" alt="Word Expert" class="cert-badge-img">
-                        </div>
-                        <h3 class="category-title">Word Expert</h3>
-                    </div>
-                    <div class="skill-description">
-                        <p>Advanced Microsoft Word expertise certification attempt.</p>
-                    </div>
-                    <div class="cert-meta">
-                        <span class="cert-issuer">Microsoft Office Specialist</span>
-                        <span class="cert-status attempted">Attempted</span>
-                    </div>
-                </div>
 
                 <div class="skill-category certificate-card attempted-cert">
                     <div class="category-header">
@@ -272,12 +343,198 @@
             </div>
         </section>
 
+        <!-- Pluralsight Section -->
+        <section class="skills-section">
+            <div class="section-header">
+                <h2 class="section-title-large">Pluralsight</h2>
+                <p class="section-description">Online learning achievements and skill assessments</p>
+            </div>
+
+            <!-- Badges -->
+            <div class="pluralsight-label">Badges</div>
+            <div class="skills-layout">
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container ps-icon">
+                            <img src="Downloads/Pluralisght/skill iq/batch.png" alt="Pluralsight Badge" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Azure Architecture and Services</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>AZ-900: Core Azure services, architecture components, and service guarantees.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Pluralsight</span>
+                        <span class="cert-status active">Completed</span>
+                    </div>
+                    <a href="https://app.pluralsight.com/achievements/share/4585afb5-5f9d-4143-add9-f18ffbcc7caf"
+                       target="_blank" class="cert-view-link">View Badge →</a>
+                </div>
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container ps-icon">
+                            <img src="Downloads/Pluralisght/skill iq/batch.png" alt="Pluralsight Badge" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Security, Management &amp; Governance</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>AZ-900: Azure security features, identity services, and compliance tools.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Pluralsight</span>
+                        <span class="cert-status active">Completed</span>
+                    </div>
+                    <a href="https://app.pluralsight.com/achievements/share/06cf9a96-f686-44d7-a0b6-160854a57d54"
+                       target="_blank" class="cert-view-link">View Badge →</a>
+                </div>
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container ps-icon">
+                            <img src="Downloads/Pluralisght/skill iq/batch.png" alt="Pluralsight Badge" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Identity, Deployment &amp; Management</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>AZ-900: Azure identity solutions, deployment tools, and management features.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Pluralsight</span>
+                        <span class="cert-status active">Completed</span>
+                    </div>
+                    <a href="https://app.pluralsight.com/achievements/share/aee76c7f-67d6-44b2-bcb5-ff32e6f25aaf"
+                       target="_blank" class="cert-view-link">View Badge →</a>
+                </div>
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container ps-icon">
+                            <img src="Downloads/Pluralisght/skill iq/batch.png" alt="Pluralsight Badge" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Foundational Cloud Concepts</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>AZ-900: Core cloud computing concepts, models, and terminology.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Pluralsight</span>
+                        <span class="cert-status active">Completed</span>
+                    </div>
+                    <a href="https://app.pluralsight.com/achievements/share/07535af4-384f-4dcc-a28b-18ec17dbd230"
+                       target="_blank" class="cert-view-link">View Badge →</a>
+                </div>
+
+            </div>
+
+            <!-- Skill IQ -->
+            <div class="pluralsight-label" style="margin-top: 2rem;">Skill IQ</div>
+            <div class="skill-iq-card">
+                <div class="skill-iq-left">
+                    <img src="Downloads/Pluralisght/skill iq/first.png"
+                         alt="Cloud Computing Fundamentals Skill IQ"
+                         class="skill-iq-screenshot">
+                </div>
+                <div class="skill-iq-right">
+                    <div class="skill-iq-meta">Pluralsight · Skill IQ</div>
+                    <h3 class="skill-iq-title">Cloud Computing Fundamentals</h3>
+                    <div class="skill-iq-score-row">
+                        <div class="skill-iq-bar-wrap">
+                            <div class="skill-iq-bar" style="width: 17%"></div>
+                        </div>
+                        <span class="skill-iq-pct">17%</span>
+                    </div>
+                    <span class="skill-iq-level">Novice</span>
+                    <p class="skill-iq-note">
+                        This result reflects where I currently stand — I am actively working to improve
+                        this score and deepen my practical cloud computing knowledge throughout the BTS program.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-bracket">[</span>
+                    <span>MS</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <p class="footer-tagline">Cloud Computing Student & Infrastructure Enthusiast based in Luxembourg.</p>
+                <div class="footer-meta">
+                    <span class="footer-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.314-2.686-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/></svg>
+                        Luxembourg
+                    </span>
+                    <span class="footer-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        maxs4114@proton.me
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <p class="footer-section-title">Contact</p>
+                <a href="mailto:maxs4114@proton.me" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    maxs4114@proton.me
+                </a>
+                <a href="https://www.linkedin.com/in/max-simon-230757387/" target="_blank" rel="noopener" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="9" x2="7" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="6.5" r="1" fill="currentColor"/><path d="M10 9v5M10 9c0 0 .8-1.5 3-1.5 1.5 0 2 1 2 2.5V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    linkedin.com/in/max-simon-230757387
+                </a>
+            </div>
+
+            <div class="footer-qr-section">
+                <p class="footer-section-title">LinkedIn</p>
+                <div class="footer-qr-wrapper">
+                    <div id="footer-linkedin-qr"></div>
+                </div>
+                <p class="footer-qr-label">Scan to connect</p>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Max Simon · BTS Cloud Computing</p>
+            <nav class="footer-nav">
+                <a href="projects.html" class="footer-nav-link">Projects</a>
+                <a href="skills.html" class="footer-nav-link">Skills</a>
+                <a href="experience.html" class="footer-nav-link">Experience</a>
+                <a href="visits.html" class="footer-nav-link">Visits &amp; Events</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+                <a href="flyer.html" class="footer-nav-link">Flyer</a>
+            </nav>
+        </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Tooltip hover toggle
+        const tipCheck  = document.getElementById('tipCheck');
+        const tipToggle = document.getElementById('tipToggle');
+        const hsTable   = document.querySelector('.hardskills-table');
+        tipCheck.addEventListener('change', () => {
+            const on = tipCheck.checked;
+            hsTable.classList.toggle('tooltips-on', on);
+            tipToggle.classList.toggle('on', on);
+        });
+
+        new QRCode(document.getElementById('footer-linkedin-qr'), {
+            text: 'https://www.linkedin.com/in/max-simon-230757387/',
+            width: 110,
+            height: 110,
+            colorDark: '#00FFA3',
+            colorLight: '#0A0E1A',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
 </body>
 </html>

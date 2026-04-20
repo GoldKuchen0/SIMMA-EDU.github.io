@@ -24,7 +24,9 @@
             <a href="projects.html" class="nav-link">Projects</a>
             <a href="skills.html" class="nav-link">Skills/Certificates</a>
             <a href="experience.html" class="nav-link">Experience</a>
+            <a href="visits.html" class="nav-link">Visits &amp; Events</a>
             <a href="contact.html" class="nav-link">Contact</a>
+            <a href="flyer.html" class="nav-link">Flyer</a>
         </div>
     </nav>
 
@@ -171,8 +173,72 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-bracket">[</span>
+                    <span>MS</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <p class="footer-tagline">Cloud Computing Student & Infrastructure Enthusiast based in Luxembourg.</p>
+                <div class="footer-meta">
+                    <span class="footer-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2C6.686 2 4 4.686 4 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.314-2.686-6-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/></svg>
+                        Luxembourg
+                    </span>
+                    <span class="footer-meta-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        maxs4114@proton.me
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <p class="footer-section-title">Contact</p>
+                <a href="mailto:maxs4114@proton.me" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    maxs4114@proton.me
+                </a>
+                <a href="https://www.linkedin.com/in/max-simon-230757387/" target="_blank" rel="noopener" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="9" x2="7" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="6.5" r="1" fill="currentColor"/><path d="M10 9v5M10 9c0 0 .8-1.5 3-1.5 1.5 0 2 1 2 2.5V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    linkedin.com/in/max-simon-230757387
+                </a>
+            </div>
+
+            <div class="footer-qr-section">
+                <p class="footer-section-title">LinkedIn</p>
+                <div class="footer-qr-wrapper">
+                    <div id="footer-linkedin-qr"></div>
+                </div>
+                <p class="footer-qr-label">Scan to connect</p>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Max Simon · BTS Cloud Computing</p>
+            <nav class="footer-nav">
+                <a href="projects.html" class="footer-nav-link">Projects</a>
+                <a href="skills.html" class="footer-nav-link">Skills</a>
+                <a href="experience.html" class="footer-nav-link">Experience</a>
+                <a href="visits.html" class="footer-nav-link">Visits &amp; Events</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+                <a href="flyer.html" class="footer-nav-link">Flyer</a>
+            </nav>
+        </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        new QRCode(document.getElementById('footer-linkedin-qr'), {
+            text: 'https://www.linkedin.com/in/max-simon-230757387/',
+            width: 110,
+            height: 110,
+            colorDark: '#00FFA3',
+            colorLight: '#0A0E1A',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
 </body>
 </html>
