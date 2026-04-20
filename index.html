@@ -447,6 +447,23 @@
             colorLight: '#0A0E1A',
             correctLevel: QRCode.CorrectLevel.H
         });
+
+        document.querySelectorAll('.cv-box-lang').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = this.getAttribute('href');
+                const filename = url.split('/').pop();
+                fetch(url)
+                    .then(r => r.blob())
+                    .then(blob => {
+                        const a = document.createElement('a');
+                        a.href = URL.createObjectURL(blob);
+                        a.download = filename;
+                        a.click();
+                        URL.revokeObjectURL(a.href);
+                    });
+            });
+        });
     </script>
 </body>
 </html>
