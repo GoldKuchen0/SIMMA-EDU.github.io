@@ -269,12 +269,13 @@
         // Category filter
         const select = document.getElementById('visitsCategory');
         const items = document.querySelectorAll('.timeline-item');
-        select.addEventListener('change', () => {
-            const val = select.value;
+        function filterVisits(val) {
             items.forEach(item => {
-                item.style.display = (val === 'all' || item.dataset.category === val) ? 'block' : 'none';
+                item.classList.toggle('hidden', val !== 'all' && item.dataset.category !== val);
             });
-        });
+        }
+        filterVisits('all');
+        select.addEventListener('change', e => filterVisits(e.target.value));
     </script>
 </body>
 </html>

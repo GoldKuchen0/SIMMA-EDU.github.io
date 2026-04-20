@@ -355,6 +355,16 @@
             colorLight: '#0A0E1A',
             correctLevel: QRCode.CorrectLevel.H
         });
+
+        const expSelect = document.getElementById('experienceCategory');
+        const expItems = document.querySelectorAll('.timeline-item');
+        function filterExp(val) {
+            expItems.forEach(item => {
+                item.classList.toggle('hidden', val !== 'all' && item.dataset.category !== val);
+            });
+        }
+        filterExp('all');
+        expSelect.addEventListener('change', e => filterExp(e.target.value));
     </script>
 </body>
 </html>
