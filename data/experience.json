@@ -1,0 +1,120 @@
+{
+  "entries": [
+    {
+      "id": "bts-2025",
+      "title": "2025 - 2027 - BTS Cloud Computing",
+      "duration": "2 years",
+      "location": "Lycée Guillaume Kroll, Esch-Alzette",
+      "category": "education",
+      "expandable": false,
+      "details": [
+        "Advanced technical degree in Cloud Computing",
+        "Specialized in cloud infrastructure and services"
+      ]
+    },
+    {
+      "id": "tech-diploma-2021",
+      "title": "2021 - 2025 - Technical Diploma in IT",
+      "duration": "4 years",
+      "location": "Lycée Guillaume Kroll, Esch-Alzette",
+      "category": "education",
+      "expandable": false,
+      "details": [
+        "Completed with honors",
+        "Comprehensive IT education and technical skills"
+      ]
+    },
+    {
+      "id": "internship-2024",
+      "title": "2024 - Internship ITIC Douanes",
+      "duration": "6 weeks",
+      "location": "Douanes, Luxembourg",
+      "category": "work",
+      "expandable": true,
+      "tasks": [
+        "Installed and configured Windows operating systems",
+        "Reorganized patch panels"
+      ],
+      "tools": [
+        "Windows Server 2022",
+        "Active Directory"
+      ],
+      "learned": [
+        "Proper OS installation and configuration procedures",
+        "IT service desk and user support workflows"
+      ]
+    },
+    {
+      "id": "summer-2024",
+      "title": "2024 - Summer Job - ITIC Douanes",
+      "duration": "4 weeks",
+      "location": "Douanes, Luxembourg",
+      "category": "work",
+      "expandable": true,
+      "tasks": [
+        "Account management and user administration",
+        "Prepared and configured workspaces for new employees",
+        "Hardware setup and software installation",
+        "Documentation of IT infrastructure changes"
+      ],
+      "tools": [
+        "Active Directory for user management",
+        "Windows 11 workstation setup"
+      ],
+      "learned": [
+        "User account provisioning and management",
+        "Workspace preparation best practices",
+        "Efficient onboarding processes"
+      ]
+    },
+    {
+      "id": "internship-2023",
+      "title": "2023 - Internship ITIC Douanes",
+      "duration": "6 weeks",
+      "location": "Douanes, Luxembourg",
+      "category": "work",
+      "expandable": true,
+      "tasks": [
+        "Installed and configured Windows operating systems",
+        "Reorganized and labeled patch panels",
+        "Cable management",
+        "Hardware troubleshooting and maintenance"
+      ],
+      "tools": [
+        "Windows Server 2022",
+        "Network testing equipment"
+      ],
+      "learned": [
+        "Windows OS deployment and configuration",
+        "Network infrastructure organization",
+        "Professional IT documentation practices",
+        "Working in a government IT environment"
+      ]
+    },
+    {
+      "id": "summer-2023",
+      "title": "2023 - Summer Job - ITIC Douanes",
+      "duration": "4 weeks",
+      "location": "Douanes, Luxembourg",
+      "category": "work",
+      "expandable": true,
+      "tasks": [
+        "Account management and user administration",
+        "Prepared workspaces for new employees",
+        "Basic IT support and troubleshooting",
+        "Equipment inventory management"
+      ],
+      "tools": [
+        "Active Directory",
+        "Windows 11 workstations",
+        "Basic network diagnostic tools"
+      ],
+      "learned": [
+        "Introduction to enterprise IT operations",
+        "User support and customer service skills",
+        "Basic account provisioning workflows",
+        "Professional workplace communication"
+      ]
+    }
+  ]
+}

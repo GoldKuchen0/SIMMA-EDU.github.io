@@ -1,0 +1,363 @@
+{
+  "projects": [
+    {
+      "id": "project-grading-dino",
+      "name": "Grading Dino",
+      "tagline": "Secure Grade Management System",
+      "course": "Proma & Pytwo",
+      "status": "completed",
+      "filterStatus": "completed",
+      "logo": { "img": "./img/gradingDino/ProjektLogo.png" },
+      "overview": "A modern grade management system designed for professors to efficiently manage and track student grades. Built with Django and PostgreSQL, the system provides a secure, scalable solution with comprehensive administrative features and robust data protection.",
+      "overviewNote": "",
+      "tech": [
+        { "img": "./img/gradingDino/django.png", "name": "Django", "desc": "Python web framework with batteries-included approach" },
+        { "img": "./img/gradingDino/postgresql.jpg", "name": "PostgreSQL", "desc": "Production-ready database with ACID compliance" },
+        { "img": "./img/gradingDino/docker.png", "name": "Docker", "desc": "Containerized deployment with Docker Compose" },
+        { "img": "./img/gradingDino/Argon2.png", "name": "Argon2", "desc": "Advanced password hashing (University of Luxembourg)" },
+        { "img": "./img/gradingDino/Pico.png", "name": "Pico.css", "desc": "Minimalist CSS framework with semantic HTML" }
+      ],
+      "techTitle": "Technology Stack",
+      "featSections": [
+        {
+          "title": "Key Features",
+          "items": [
+            { "t": "Admin Panel", "d": "Complete grade management UI without custom interface development" },
+            { "t": "Authentication System", "d": "Built-in user roles, permissions, and access control" },
+            { "t": "Security First", "d": "CSRF, XSS, and SQL injection protection by default" },
+            { "t": "Server-Side Rendering", "d": "All validation and logic processed server-side" },
+            { "t": "One-Command Deploy", "d": "System starts with single docker compose up command" }
+          ]
+        }
+      ],
+      "team": [
+        { "name": "Guillaume", "role": "Developer" },
+        { "name": "Sven", "role": "Developer · Documentation · Design" },
+        { "name": "Erik", "role": "Documentation · User Stories" },
+        { "name": "Max", "role": "Documentation · User Stories" }
+      ],
+      "learned": [],
+      "screenshots": [],
+      "downloads": [
+        { "ico": "📄", "name": "Documentation", "desc": "Project documentation (PDF)", "url": "Downloads/gradingDino/document.pdf", "note": "" },
+        { "ico": "🖼️", "name": "Preview Image", "desc": "Project screenshot (PNG)", "url": "img/gradingDino/ProjektLogo.png", "note": "" }
+      ]
+    },
+    {
+      "id": "project-lme",
+      "name": "Luxembourg Media Engineering",
+      "tagline": "Web Development & Hosting Services",
+      "course": "PROMA",
+      "status": "development",
+      "filterStatus": "development",
+      "logo": { "img": "./img/lme/lme_logo.png" },
+      "overview": "LME is a PROMA project offering professional web development services using Laravel. We provide comprehensive solutions including website creation, hosting, and management services for businesses and organizations. Our focus is on delivering modern, scalable web applications with reliable infrastructure.",
+      "overviewNote": "Future Vision: Building LME into a real registered company offering professional web development and hosting services to clients across Luxembourg.",
+      "tech": [
+        { "img": "./img/lme/Laravel.svg.png", "name": "Laravel", "desc": "PHP framework for robust web applications" },
+        { "img": "./img/lme/mysql.png", "name": "MySQL", "desc": "Relational database management system" },
+        { "img": "./img/lme/coolify.png", "name": "Coolify", "desc": "Self-hosted deployment platform" },
+        { "img": "./img/lme/proxmox_logo.png", "name": "Proxmox VE", "desc": "Virtualization management platform" },
+        { "img": "./img/lme/proxmoxBackup.jpg", "name": "Proxmox Backup", "desc": "Enterprise backup solution" },
+        { "img": "./img/lme/cloudflare.png", "name": "Cloudflare", "desc": "CDN and security services" },
+        { "img": "./img/lme/hetzner.png", "name": "Hetzner", "desc": "Cloud hosting infrastructure provider" }
+      ],
+      "techTitle": "Technology Stack",
+      "featSections": [
+        {
+          "title": "Service Offerings",
+          "items": [
+            { "t": "Website Creation", "d": "Professional Laravel-based website development" },
+            { "t": "Web Hosting", "d": "Reliable hosting solutions" },
+            { "t": "Website Management", "d": "Ongoing maintenance and support services" },
+            { "t": "Custom Solutions", "d": "Tailored web applications for specific needs" }
+          ]
+        }
+      ],
+      "team": [
+        { "name": "Sven", "role": "Developer" },
+        { "name": "Max", "role": "Infrastructure" },
+        { "name": "Erik", "role": "Legal Documentation" }
+      ],
+      "learned": [
+        "Working with VMs in Proxmox — creating, configuring and managing virtual machines",
+        "Managing domains with Cloudflare — DNS records, proxying and security settings",
+        "Setting up Coolify and hosting websites on self-managed infrastructure"
+      ],
+      "screenshots": [],
+      "downloads": [
+        { "ico": "📄", "name": "Project Proposal", "desc": "LME project proposal (PDF)", "url": "Downloads/lme/LME Project Proposal.pdf", "note": "" }
+      ]
+    },
+    {
+      "id": "project-ssd",
+      "name": "SSD Presentation",
+      "tagline": "Technical Presentation on SSD Technology",
+      "course": "CLOIF",
+      "status": "completed",
+      "filterStatus": "completed",
+      "logo": { "img": "./img/ssd/ssd.png" },
+      "overview": "A comprehensive technical presentation covering Solid State Drive (SSD) technology, architecture, and performance characteristics. The presentation explores various aspects of SSD technology including storage technology, performance metrics, and practical applications in modern computing environments.",
+      "overviewNote": "",
+      "tech": [
+        { "img": "./img/ssd/ppt-icon.png", "name": "PowerPoint", "desc": "Professional presentation software for creating slides" }
+      ],
+      "techTitle": "Tools Used",
+      "featSections": [
+        {
+          "title": "Key Topics",
+          "items": [
+            { "t": "SSD Architecture", "d": "Internal structure and components of SSDs" },
+            { "t": "Performance Metrics", "d": "Speed comparisons and benchmarks" },
+            { "t": "Technology Comparison", "d": "SSD vs HDD advantages and use cases" },
+            { "t": "Practical Applications", "d": "Real-world usage scenarios and recommendations" }
+          ]
+        }
+      ],
+      "team": [],
+      "learned": [],
+      "screenshots": [],
+      "downloads": [
+        { "ico": "📊", "name": "Presentation", "desc": "SSD presentation slides (PPTX)", "url": "Downloads/ssd/SSD.pptx", "note": "" }
+      ]
+    },
+    {
+      "id": "project-dfs",
+      "name": "DFS Shared Workfolder",
+      "tagline": "Windows Distributed File System Implementation",
+      "course": "OSYCL",
+      "status": "completed",
+      "filterStatus": "completed",
+      "logo": { "img": "./img/dfs/icon.jpg" },
+      "overview": "Implementation of a Windows Distributed File System (DFS) environment with shared workfolders for enterprise file management. The project demonstrates configuration of DFS Namespace and Replication services integrated with Active Directory for centralized file access and redundancy across multiple servers.",
+      "overviewNote": "",
+      "tech": [
+        { "ico": "🪟", "name": "Windows Server", "desc": "Server operating system platform" },
+        { "ico": "📁", "name": "DFS Namespace", "desc": "Unified file system namespace structure" },
+        { "ico": "🔄", "name": "DFS Replication", "desc": "Multi-master replication engine" },
+        { "ico": "🔐", "name": "Active Directory", "desc": "Directory services and authentication" }
+      ],
+      "techTitle": "Technology Stack",
+      "featSections": [
+        {
+          "title": "Key Features",
+          "items": [
+            { "t": "Centralized Access", "d": "Unified namespace for simplified file access" },
+            { "t": "Automatic Replication", "d": "Real-time file synchronization across servers" },
+            { "t": "High Availability", "d": "Redundancy and failover capabilities" },
+            { "t": "AD Integration", "d": "Seamless authentication and permissions management" }
+          ]
+        }
+      ],
+      "team": [
+        { "name": "Max · Erik", "role": "System Administrator" },
+        { "name": "Sven", "role": "Presentation" }
+      ],
+      "learned": [
+        "Windows Server DFS — setting up namespaces and replication between servers",
+        "Managing user rights and share permissions in a Windows Server environment"
+      ],
+      "screenshots": [],
+      "downloads": [
+        { "ico": "📄", "name": "Documentation", "desc": "DFS demonstration guide (PDF)", "url": "Downloads/dfs/Demonstration DFS.pdf", "note": "" }
+      ]
+    },
+    {
+      "id": "project-carnotes",
+      "name": "CarNotes",
+      "tagline": "Vehicle Maintenance Tracking System",
+      "course": "ITTAU",
+      "status": "completed",
+      "filterStatus": "completed",
+      "logo": { "img": "./img/carnotes/carnotes.png" },
+      "overview": "CarNotes is a comprehensive car management application built with Microsoft PowerApps that enables users to track vehicle maintenance, schedule appointments, and manage service intervals. The system features automated email notifications via Power Automate to remind users of upcoming maintenance tasks and SNCT (technical inspection) appointments.",
+      "overviewNote": "Future Plans: Expanding the application with additional features including expense tracking, fuel consumption monitoring, service history reports, and multi-vehicle management capabilities to provide a complete automotive management solution.",
+      "tech": [
+        { "ico": "⚡", "name": "PowerApps", "desc": "Low-code application platform for custom business apps" },
+        { "ico": "🔄", "name": "Power Automate", "desc": "Workflow automation for email notifications" },
+        { "ico": "🏢", "name": "Dataverse", "desc": "Integration with Microsoft ecosystem" }
+      ],
+      "techTitle": "Technology Stack",
+      "featSections": [
+        {
+          "title": "Key Features",
+          "items": [
+            { "t": "Maintenance Tracking", "d": "Record and manage vehicle maintenance history and notes" },
+            { "t": "Service Intervals", "d": "Track maintenance intervals and schedule upcoming services" },
+            { "t": "SNCT Appointments", "d": "Manage technical inspection appointments and reminders" },
+            { "t": "Email Notifications", "d": "Automated reminders for upcoming maintenance via Power Automate" }
+          ]
+        }
+      ],
+      "team": [],
+      "learned": [
+        "How Power Automate and PowerApps work together to build functional apps",
+        "Building a complete app on the Power Platform from data model to UI"
+      ],
+      "screenshots": [
+        { "src": "Downloads/carnotes/first.png", "cap": "Vehicle overview — list of registered cars with photo and model name" },
+        { "src": "Downloads/carnotes/second.png", "cap": "Maintenance note detail — SNCT entry for a Peugeot showing notes, due date and reminder status" },
+        { "src": "Downloads/carnotes/dritte.png", "cap": "Vehicle edit form — enter brand, model, color, engine specs and attach a car photo" }
+      ],
+      "downloads": []
+    },
+    {
+      "id": "project-python-monitor",
+      "name": "Python Monitor",
+      "tagline": "Server Log Analyzer",
+      "course": "PYTWO",
+      "status": "development",
+      "filterStatus": "development",
+      "logo": { "img": "./img/python/python-icon.png" },
+      "overview": "A Python-based monitoring tool that analyzes server authentication logs (auth.log) to track connection attempts. The application provides real-time visibility into who is attempting to connect to the server, which user accounts are being targeted, and the originating IP addresses of connection attempts.",
+      "overviewNote": "",
+      "tech": [
+        { "ico": "🐍", "name": "Python", "desc": "Core programming language for log analysis" },
+        { "ico": "📄", "name": "Log Parsing", "desc": "Real-time authentication log file monitoring" },
+        { "ico": "🔍", "name": "Pattern Matching", "desc": "Regular expressions for extracting connection data" }
+      ],
+      "techTitle": "Technology Stack",
+      "featSections": [
+        {
+          "title": "Key Features",
+          "items": [
+            { "t": "Connection Monitoring", "d": "Track all authentication attempts to the server" },
+            { "t": "User Analysis", "d": "Identify targeted user accounts in connection attempts" },
+            { "t": "IP Tracking", "d": "Display source IP addresses of connection attempts" },
+            { "t": "Security Overview", "d": "Comprehensive dashboard for server access monitoring" }
+          ]
+        }
+      ],
+      "team": [],
+      "learned": [],
+      "screenshots": [],
+      "downloads": []
+    },
+    {
+      "id": "project-truenas",
+      "name": "TrueNAS Community Server",
+      "tagline": "Self-Hosted NAS Platform & Software Stack",
+      "course": "OSYCL",
+      "status": "completed",
+      "filterStatus": "completed",
+      "logo": { "ico": "🗄️" },
+      "overview": "We built and configured a TrueNAS Community server from scratch — including physically assembling the server hardware ourselves. The project covers the full process from hardware assembly and OS installation through storage pool configuration, network shares, and deployment of additional self-hosted software services.",
+      "overviewNote": "Authors: Eric & Max.",
+      "tech": [
+        { "ico": "🔧", "name": "Custom Hardware Build", "desc": "Server assembled from components by Eric & Max" },
+        { "ico": "🗄️", "name": "TrueNAS Community", "desc": "Open-source NAS operating system based on FreeBSD" },
+        { "ico": "💾", "name": "ZFS", "desc": "Advanced file system and volume manager" },
+        { "ico": "📦", "name": "Self-Hosted Apps", "desc": "Additional services deployed on the server" }
+      ],
+      "techTitle": "Technology Stack",
+      "featSections": [
+        {
+          "title": "Key Features",
+          "items": [
+            { "t": "Server Setup", "d": "Full TrueNAS installation and initial configuration" },
+            { "t": "Storage Management", "d": "Pool creation, datasets, and quota configuration" },
+            { "t": "Network Shares", "d": "SMB/NFS share setup for file access across the network" },
+            { "t": "Additional Software", "d": "Deployment and configuration of community apps and services" }
+          ]
+        }
+      ],
+      "team": [
+        { "name": "Max", "role": "Documentation · Configuration" },
+        { "name": "Sven", "role": "Hardware · Installation · RAID Controller Configuration" },
+        { "name": "Erik", "role": "Installation · Configuration" }
+      ],
+      "learned": [
+        "Creating and managing network shares and user permissions in TrueNAS",
+        "Setting up a software RAID — understanding RAID levels and ZFS storage pools"
+      ],
+      "screenshots": [],
+      "downloads": [
+        { "ico": "📄", "name": "Server Documentation", "desc": "Full server setup documentation (PDF)", "url": "Downloads/TrueNas/Server_Documentation.pdf", "note": "Authors: Eric & Max" },
+        { "ico": "📊", "name": "TrueNAS Presentation", "desc": "Project presentation slides (PPTX)", "url": "Downloads/TrueNas/TrueNAS.pptx", "note": "" }
+      ]
+    },
+    {
+      "id": "project-azure",
+      "name": "Azure Technical Meeting",
+      "tagline": "Cloud Topics Research & Peer Teaching Session",
+      "course": "TBUCO",
+      "status": "completed",
+      "filterStatus": "completed",
+      "logo": { "ico": "☁️" },
+      "overview": "As part of the TBUCO technical meeting, each student independently researched assigned Azure topics and figured out how they work. The findings were then presented and explained to classmates in a collaborative meeting format, going through each topic hands-on together. Architecture diagrams were created in Lucidchart to visually document the setups.",
+      "overviewNote": "",
+      "tech": [
+        { "ico": "☁️", "name": "Microsoft Azure", "desc": "Cloud platform and services covered in the session" },
+        { "img": "./img/ssd/ppt-icon.png", "name": "PowerPoint", "desc": "Presentation material for the technical meeting" },
+        { "ico": "🎨", "name": "Lucidchart", "desc": "Architecture diagram creation and documentation" }
+      ],
+      "techTitle": "Tools Used",
+      "featSections": [
+        {
+          "title": "Topics Presented",
+          "items": [
+            { "t": "VM Connectivity", "d": "Azure Bastion, External SSH, Cloud Shell, and Jump Host connection methods" },
+            { "t": "Web Hosting with a VM", "d": "nginx as reverse proxy and web server, private/public IP setup" },
+            { "t": "Auto-Shutdown", "d": "Configuring automatic VM shutdown schedules in Azure" },
+            { "t": "Free Account VMs", "d": "Creating virtual machines within Azure free tier limits and restrictions" },
+            { "t": "Azure Resource Visualizer", "d": "Reading and interpreting resource diagrams and infrastructure layouts" },
+            { "t": "Lucidchart Architecture Diagram", "d": "Creating detailed cloud architecture diagrams to document the infrastructure" }
+          ]
+        }
+      ],
+      "team": [
+        { "name": "Erik", "role": "VM Connectivity · Web Hosting · Azure Resource Visualizer" },
+        { "name": "Max", "role": "Auto Shutdown · Free Account · Lucidchart" }
+      ],
+      "learned": [
+        "How to prepare a technical topic thoroughly — testing everything yourself before presenting",
+        "Gained hands-on Azure experience across VMs, networking, auto-shutdown and free tier limits",
+        "Anticipating questions and being able to explain complex cloud concepts clearly"
+      ],
+      "screenshots": [],
+      "downloads": [
+        { "ico": "📄", "name": "Presentation Proposal", "desc": "Azure presentation proposal document (DOCX)", "url": "Downloads/TBUCO-Tecnical-meeting/Azure_Presentation_Proposal (1).docx", "note": "Authors: Erik & Max" },
+        { "ico": "🗺️", "name": "Cloud Architecture Diagram", "desc": "Lucidchart diagram documenting the full Azure infrastructure layout — showing virtual machines, network topology, resource groups, and service connections designed during the technical meeting (PDF)", "url": "Downloads/TBUCO-Tecnical-meeting/Cloud Architecture.pdf", "note": "" }
+      ]
+    },
+    {
+      "id": "project-portfolio",
+      "name": "Portfolio Website",
+      "tagline": "Modern Personal Portfolio Platform",
+      "course": "TBUCO",
+      "status": "future",
+      "filterStatus": "future",
+      "logo": { "img": "./img/portfolio/portfolio.jpg" },
+      "overview": "This portfolio website serves as a comprehensive showcase of technical skills, projects, and professional experience. Built with modern web technologies, it features a clean, responsive design with dynamic animations and an intuitive user interface.",
+      "overviewNote": "Future Enhancement: Transform the website from a static hardcoded solution into a dynamic platform powered by a database backend. This would enable content management through an admin panel, allowing projects, skills, and experience to be updated without modifying code directly. The evolution would include a proper CMS architecture with RESTful APIs for easier maintenance and scalability.",
+      "tech": [
+        { "ico": "🌐", "name": "HTML5", "desc": "Semantic markup and structure" },
+        { "ico": "🎨", "name": "CSS3", "desc": "Modern styling with custom properties and animations" },
+        { "ico": "⚡", "name": "JavaScript", "desc": "Interactive features and dynamic content" }
+      ],
+      "techTitle": "Current Technology Stack",
+      "featSections": [
+        {
+          "title": "Key Features",
+          "items": [
+            { "t": "Project Showcase", "d": "Dynamic filtering system for technical projects" },
+            { "t": "Skills Display", "d": "Comprehensive overview of technical capabilities" },
+            { "t": "Modern Animations", "d": "Smooth transitions and interactive elements" }
+          ]
+        },
+        {
+          "title": "Future Technology Stack",
+          "items": [
+            { "t": "Backend Framework", "d": "Laravel backend architecture" },
+            { "t": "Database", "d": "MySQL for content management" },
+            { "t": "Admin Panel", "d": "CMS interface for easy content updates" }
+          ]
+        }
+      ],
+      "team": [],
+      "learned": [],
+      "screenshots": [],
+      "downloads": []
+    }
+  ]
+}

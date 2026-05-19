@@ -1,0 +1,134 @@
+{
+  "skills": [
+    {
+      "id": "virtualization",
+      "icon": "📦",
+      "name": "Virtualization",
+      "tags": [
+        { "label": "Proxmox VE", "tip": "Open-source hypervisor for running VMs and containers on bare metal" },
+        { "label": "VirtualBox", "tip": "Free VM software by Oracle for running guest operating systems" },
+        { "label": "TrueNAS", "tip": "Linux-based NAS operating system for network-attached storage" }
+      ],
+      "projects": [
+        { "label": "LME", "href": "projects.html#project-lme" },
+        { "label": "TrueNAS Server", "href": "projects.html#project-truenas" }
+      ]
+    },
+    {
+      "id": "hardware",
+      "icon": "💻",
+      "name": "Hardware",
+      "tags": [
+        { "label": "Server Assembly", "tip": "" },
+        { "label": "RAID Controllers", "tip": "Hardware that manages multiple disks as RAID arrays for redundancy or performance" },
+        { "label": "Workstations", "tip": "" },
+        { "label": "Patch Panels", "tip": "Rack-mounted panel consolidating network cable connections in a server room" }
+      ],
+      "projects": [
+        { "label": "TrueNAS Server", "href": "projects.html#project-truenas" }
+      ]
+    },
+    {
+      "id": "cloud",
+      "icon": "☁️",
+      "name": "Cloud",
+      "tags": [
+        { "label": "Microsoft Azure", "tip": "Microsoft's cloud platform offering VMs, storage, networking and managed services" },
+        { "label": "Cloudflare", "tip": "CDN and DNS provider with DDoS protection and global edge network" },
+        { "label": "Hetzner", "tip": "German cloud and dedicated server hosting provider" }
+      ],
+      "projects": [
+        { "label": "Azure Meeting", "href": "projects.html#project-azure" },
+        { "label": "LME", "href": "projects.html#project-lme" }
+      ]
+    },
+    {
+      "id": "networking",
+      "icon": "🔌",
+      "name": "Networking",
+      "tags": [
+        { "label": "Cisco Packet Tracer", "tip": "Cisco's network simulation tool for designing and testing network topologies" }
+      ],
+      "projects": [
+        { "label": "TrueNAS Server", "href": "projects.html#project-truenas" },
+        { "label": "DFS Workfolder", "href": "projects.html#project-dfs" }
+      ]
+    },
+    {
+      "id": "os",
+      "icon": "🖥️",
+      "name": "Operating Systems",
+      "tags": [
+        { "label": "Windows 10/11", "tip": "" },
+        { "label": "Windows Server", "tip": "Microsoft server OS for managing users, files, AD and network services" },
+        { "label": "Ubuntu Server", "tip": "Headless Linux server OS used for hosting and infrastructure" },
+        { "label": "Ubuntu Desktop", "tip": "" },
+        { "label": "Proxmox", "tip": "Proxmox VE used as the bare-metal OS for virtual infrastructure" }
+      ],
+      "projects": [
+        { "label": "DFS Workfolder", "href": "projects.html#project-dfs" },
+        { "label": "LME", "href": "projects.html#project-lme" },
+        { "label": "TrueNAS Server", "href": "projects.html#project-truenas" }
+      ]
+    },
+    {
+      "id": "programming",
+      "icon": "⚙️",
+      "name": "Programming",
+      "tags": [
+        { "label": "Python", "tip": "" },
+        { "label": "Bash / PowerShell", "tip": "Command-line shells for scripting and automating system administration tasks" }
+      ],
+      "projects": [
+        { "label": "Grading Dino", "href": "projects.html#project-grading-dino" },
+        { "label": "Python Monitor", "href": "projects.html#project-python-monitor" }
+      ]
+    },
+    {
+      "id": "webdev",
+      "icon": "🌐",
+      "name": "Web Development",
+      "tags": [
+        { "label": "HTML", "tip": "" },
+        { "label": "CSS", "tip": "" },
+        { "label": "PHP", "tip": "Server-side scripting language for building dynamic web applications" },
+        { "label": "JavaScript", "tip": "" }
+      ],
+      "projects": [
+        { "label": "Grading Dino", "href": "projects.html#project-grading-dino" },
+        { "label": "LME", "href": "projects.html#project-lme" },
+        { "label": "Portfolio", "href": "projects.html#project-portfolio" }
+      ]
+    },
+    {
+      "id": "projectmgmt",
+      "icon": "📊",
+      "name": "Project Management",
+      "tags": [
+        { "label": "Scrum", "tip": "Agile framework for iterative development using sprints and defined roles" },
+        { "label": "Kanban", "tip": "Visual workflow method using boards and cards to manage tasks" },
+        { "label": "Microsoft Planner", "tip": "Microsoft 365 task and project planning tool with board and list views" },
+        { "label": "Git", "tip": "" }
+      ],
+      "projects": [
+        { "label": "Grading Dino", "href": "projects.html#project-grading-dino" },
+        { "label": "LME", "href": "projects.html#project-lme" },
+        { "label": "Azure Meeting", "href": "projects.html#project-azure" }
+      ]
+    },
+    {
+      "id": "m365",
+      "icon": "🏢",
+      "name": "Microsoft 365",
+      "tags": [
+        { "label": "Power Platform", "tip": "Microsoft suite of low-code tools for apps, automation and analytics" },
+        { "label": "PowerApps", "tip": "Microsoft tool for building custom business apps without traditional coding" },
+        { "label": "Power Automate", "tip": "Microsoft workflow automation tool for connecting apps and services" }
+      ],
+      "projects": [
+        { "label": "CarNotes", "href": "projects.html#project-carnotes" },
+        { "label": "DFS Workfolder", "href": "projects.html#project-dfs" }
+      ]
+    }
+  ]
+}
