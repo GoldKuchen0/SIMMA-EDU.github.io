@@ -1,0 +1,97 @@
+{
+  "visits": [
+    {
+      "id": "yves-schluter-2026",
+      "title": "2026 - Interview Simulation with Yves Schlüter",
+      "duration": "Semester 1",
+      "location": "Lycée Guillaume Kroll, Esch-Alzette",
+      "category": "external",
+      "details": [
+        "External guest Yves Schlüter, a former Post Luxembourg employee, visited our class",
+        "Conducted a mock job interview simulation and reviewed our cover letters and CVs",
+        "Received personalized feedback on improving the layout and presentation of the CV",
+        "Learned how to confidently answer critical and challenging interview questions"
+      ]
+    },
+    {
+      "id": "guy-marong-2025",
+      "title": "2025/26 - CV & Interview Preparation with Guy Marong",
+      "duration": "Semester 1",
+      "location": "Lycée Guillaume Kroll, Esch-Alzette",
+      "category": "external",
+      "details": [
+        "External guest <a href=\"https://www.linkedin.com/in/guymarong/\" target=\"_blank\" rel=\"noopener\">Guy Marong</a> accompanied our class throughout the entire first semester",
+        "Guided us on how to properly structure an English CV",
+        "Taught techniques for preparing and presenting oneself in a professional job interview"
+      ]
+    },
+    {
+      "id": "ntt-luxembourg-2025",
+      "title": "2025 - Interview Simulation with NTT Luxembourg",
+      "duration": "Semester 1",
+      "location": "Lycée Guillaume Kroll, Esch-Alzette",
+      "category": "external",
+      "details": [
+        "Applied CV and interview skills from Guy Marong's sessions in a real-world mock interview with NTT Luxembourg",
+        "Gained practical experience in a professional interview setting with an actual company"
+      ]
+    },
+    {
+      "id": "luxembourg-army-2026",
+      "title": "2026 - Luxembourg Army Visit",
+      "duration": "March",
+      "location": "Luxembourg Army, Luxembourg",
+      "category": "visit",
+      "details": [
+        "Scheduled military facility tour",
+        "Exploration of military technology and infrastructure"
+      ]
+    },
+    {
+      "id": "luxconnect-2026",
+      "title": "2026 - LuxConnect Visit",
+      "duration": "January",
+      "location": "LuxConnect, Luxembourg",
+      "category": "visit",
+      "details": [
+        "Data center facility tour and inspection",
+        "Learned about data center infrastructure and operations"
+      ]
+    },
+    {
+      "id": "house-entrepreneurship-2026",
+      "title": "2026 - House of Entrepreneurship - Online Course",
+      "duration": "January",
+      "location": "House of Entrepreneurship, Luxembourg",
+      "category": "training",
+      "details": [
+        "Completed online course on business creation and entrepreneurship",
+        "Learned fundamentals of starting and managing a company"
+      ]
+    },
+    {
+      "id": "arhs-aws-recap-2026",
+      "title": "2026 - ARHS Group Visit – AWS re:Invent re:cap",
+      "duration": "January 23 – 24",
+      "location": "ARHS Group, Belval, Luxembourg",
+      "category": "visit",
+      "details": [
+        "Attended AWS re:Invent re:cap event: \"From Las Vegas to Belval\"",
+        "Overview of the latest AWS announcements and innovations from re:Invent",
+        "Insights into cloud computing trends and AWS services"
+      ]
+    },
+    {
+      "id": "az900-training-2025",
+      "title": "2025 - Microsoft Official Training – AZ-900",
+      "duration": "2 Days",
+      "location": "Lycée Guillaume Kroll, Esch-Alzette",
+      "category": "external",
+      "details": [
+        "External trainer Xavier Nix from <strong>Deep</strong> visited our class for two full days of in-person instruction",
+        "Course: AZ-900 Microsoft Azure Fundamentals",
+        "Covered core cloud concepts, Azure services, and pricing"
+      ]
+    }
+  ]
+}

@@ -219,128 +219,22 @@
             </div>
         </section>
 
-        <!-- Certificates Section -->
-        <section class="skills-section">
+        <!-- Certificates Section (rendered from data/certificates.json) -->
+        <section class="skills-section" id="section-certifications">
             <div class="section-header">
                 <h2 class="section-title-large">Certifications</h2>
                 <p class="section-description">Professional Microsoft credentials and achievements</p>
             </div>
-
-            <div class="skills-layout">
-
-                <div class="skill-category certificate-card">
-                    <div class="category-header">
-                        <div class="cert-image-container">
-                            <img src="./certificates/azure fundamentals.png" alt="Azure Fundamentals" class="cert-badge-img">
-                        </div>
-                        <h3 class="category-title">Azure Fundamentals</h3>
-                    </div>
-                    <div class="skill-description">
-                        <p>Foundation-level knowledge of cloud services and Microsoft Azure.</p>
-                    </div>
-                    <div class="cert-meta">
-                        <span class="cert-issuer">Microsoft Certified</span>
-                        <span class="cert-status active">Active</span>
-                    </div>
-                    <a href="https://www.credly.com/badges/d1020d9d-d9e6-474d-b1cf-090eae7f51d3/linked_in_profile"
-                       target="_blank"
-                       class="cert-view-link">
-                        View Credential →
-                    </a>
-                </div>
-
-                <div class="skill-category certificate-card">
-                    <div class="category-header">
-                        <div class="cert-image-container">
-                            <img src="./certificates/word1.png" alt="Word Associate" class="cert-badge-img">
-                        </div>
-                        <h3 class="category-title">Word Associate</h3>
-                    </div>
-                    <div class="skill-description">
-                        <p>Expertise in Microsoft Word with Microsoft 365 Apps.</p>
-                    </div>
-                    <div class="cert-meta">
-                        <span class="cert-issuer">Microsoft Office Specialist</span>
-                        <span class="cert-date">Nov 2025 - Nov 2030</span>
-                    </div>
-                    <a href="https://www.credly.com/badges/d948da79-5839-4e60-9662-d44abba46877/linked_in_profile"
-                       target="_blank"
-                       class="cert-view-link">
-                        View Credential →
-                    </a>
-                </div>
-
-                <div class="skill-category certificate-card">
-                    <div class="category-header">
-                        <div class="cert-image-container">
-                            <img src="./certificates/powerpoint1.png" alt="PowerPoint Associate" class="cert-badge-img">
-                        </div>
-                        <h3 class="category-title">PowerPoint Associate</h3>
-                    </div>
-                    <div class="skill-description">
-                        <p>Proficiency in creating presentations using Microsoft PowerPoint.</p>
-                    </div>
-                    <div class="cert-meta">
-                        <span class="cert-issuer">Microsoft Office Specialist</span>
-                        <span class="cert-date">Oct 2025 - Oct 2030</span>
-                    </div>
-                    <a href="https://www.credly.com/badges/bc5e0ab9-c642-4708-bc90-c17e2b070f19/linked_in_profile"
-                       target="_blank"
-                       class="cert-view-link">
-                        View Credential →
-                    </a>
-                </div>
-
-                <div class="skill-category certificate-card">
-                    <div class="category-header">
-                        <div class="cert-image-container">
-                            <img src="./certificates/word2.png" alt="Word Expert" class="cert-badge-img">
-                        </div>
-                        <h3 class="category-title">Word Expert</h3>
-                    </div>
-                    <div class="skill-description">
-                        <p>Advanced Microsoft Word expertise with Microsoft 365 Apps.</p>
-                    </div>
-                    <div class="cert-meta">
-                        <span class="cert-issuer">Microsoft Office Specialist</span>
-                        <span class="cert-status active">Active</span>
-                    </div>
-                    <a href="https://www.credly.com/badges/419b661e-2a8e-4f86-8172-75f500e02651"
-                       target="_blank"
-                       class="cert-view-link">
-                        View Credential →
-                    </a>
-                </div>
-
-            </div>
+            <div class="skills-layout" id="certs-grid"></div>
         </section>
 
         <!-- Attempted Certifications Section -->
-        <section class="skills-section">
+        <section class="skills-section" id="section-attempted">
             <div class="section-header">
                 <h2 class="section-title-large">Certification Journey</h2>
                 <p class="section-description">Attempted certifications and continuous learning efforts</p>
             </div>
-
-            <div class="skills-layout">
-
-                <div class="skill-category certificate-card attempted-cert">
-                    <div class="category-header">
-                        <div class="cert-image-container">
-                            <img src="./certificates/excel1.png" alt="Excel Associate" class="cert-badge-img">
-                        </div>
-                        <h3 class="category-title">Excel Associate</h3>
-                    </div>
-                    <div class="skill-description">
-                        <p>Microsoft Excel proficiency certification attempt.</p>
-                    </div>
-                    <div class="cert-meta">
-                        <span class="cert-issuer">Microsoft Office Specialist</span>
-                        <span class="cert-status attempted">Attempted</span>
-                    </div>
-                </div>
-
-            </div>
+            <div class="skills-layout" id="certs-attempted-grid"></div>
         </section>
 
         <!-- Pluralsight Section -->
@@ -550,6 +444,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
     <script>
         // Tooltip hover toggle
         const tipCheck  = document.getElementById('tipCheck');
@@ -569,6 +464,42 @@
             colorLight: '#0A0E1A',
             correctLevel: QRCode.CorrectLevel.H
         });
+
+        // Load certificates from JSON
+        function certStatusHTML(cert) {
+            if (cert.status === 'active')   return `<span class="cert-status active">Active</span>`;
+            if (cert.status === 'attempted') return `<span class="cert-status attempted">Attempted</span>`;
+            return `<span class="cert-date">${cert.statusLabel}</span>`;
+        }
+        function certCard(cert) {
+            const attempted = cert.section === 'attempted';
+            const link = cert.credentialUrl
+                ? `<a href="${cert.credentialUrl}" target="_blank" class="cert-view-link">View Credential →</a>`
+                : '';
+            return `
+                <div class="skill-category certificate-card${attempted ? ' attempted-cert' : ''}">
+                    <div class="category-header">
+                        <div class="cert-image-container">
+                            <img src="${cert.image}" alt="${cert.title}" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">${cert.title}</h3>
+                    </div>
+                    <div class="skill-description"><p>${cert.description}</p></div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">${cert.issuer}</span>
+                        ${certStatusHTML(cert)}
+                    </div>
+                    ${link}
+                </div>`;
+        }
+        fetch('data/certificates.json')
+            .then(r => r.json())
+            .then(data => {
+                const main     = data.certificates.filter(c => c.section === 'certifications');
+                const attempted = data.certificates.filter(c => c.section === 'attempted');
+                document.getElementById('certs-grid').innerHTML          = main.map(certCard).join('');
+                document.getElementById('certs-attempted-grid').innerHTML = attempted.map(certCard).join('');
+            });
     </script>
 </body>
 </html>

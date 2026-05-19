@@ -1,0 +1,91 @@
+{
+  "certificates": [
+    {
+      "id": "azure-fundamentals",
+      "title": "Azure Fundamentals",
+      "description": "Foundation-level knowledge of cloud services and Microsoft Azure.",
+      "image": "./certificates/azure fundamentals.png",
+      "issuer": "Microsoft Certified",
+      "status": "active",
+      "statusLabel": "Active",
+      "credentialUrl": "https://www.credly.com/badges/d1020d9d-d9e6-474d-b1cf-090eae7f51d3/linked_in_profile",
+      "section": "certifications"
+    },
+    {
+      "id": "word-associate",
+      "title": "Word Associate",
+      "description": "Expertise in Microsoft Word with Microsoft 365 Apps.",
+      "image": "./certificates/word1.png",
+      "issuer": "Microsoft Office Specialist",
+      "status": "date",
+      "statusLabel": "Nov 2025 - Nov 2030",
+      "credentialUrl": "https://www.credly.com/badges/d948da79-5839-4e60-9662-d44abba46877/linked_in_profile",
+      "section": "certifications"
+    },
+    {
+      "id": "powerpoint-associate",
+      "title": "PowerPoint Associate",
+      "description": "Proficiency in creating presentations using Microsoft PowerPoint.",
+      "image": "./certificates/powerpoint1.png",
+      "issuer": "Microsoft Office Specialist",
+      "status": "date",
+      "statusLabel": "Oct 2025 - Oct 2030",
+      "credentialUrl": "https://www.credly.com/badges/bc5e0ab9-c642-4708-bc90-c17e2b070f19/linked_in_profile",
+      "section": "certifications"
+    },
+    {
+      "id": "word-expert",
+      "title": "Word Expert",
+      "description": "Advanced Microsoft Word expertise with Microsoft 365 Apps.",
+      "image": "./certificates/word2.png",
+      "issuer": "Microsoft Office Specialist",
+      "status": "active",
+      "statusLabel": "Active",
+      "credentialUrl": "https://www.credly.com/badges/419b661e-2a8e-4f86-8172-75f500e02651",
+      "section": "certifications"
+    },
+    {
+      "id": "excel-associate",
+      "title": "Excel Associate",
+      "description": "Microsoft Excel proficiency certification attempt.",
+      "image": "./certificates/excel1.png",
+      "issuer": "Microsoft Office Specialist",
+      "status": "attempted",
+      "statusLabel": "Attempted",
+      "credentialUrl": "",
+      "section": "attempted"
+    }
+  ],
+  "pluralsight": {
+    "badges": [
+      {
+        "id": "ps-azure-arch",
+        "title": "Azure Architecture and Services",
+        "description": "AZ-900: Core Azure services, architecture components, and service guarantees.",
+        "image": "Downloads/Pluralisght/skill-iq/batch.png",
+        "badgeUrl": "https://app.pluralsight.com/achievements/share/4585afb5-5f9d-4143-add9-f18ffbcc7caf"
+      },
+      {
+        "id": "ps-security-mgmt",
+        "title": "Security, Management & Governance",
+        "description": "AZ-900: Azure security features, identity services, and compliance tools.",
+        "image": "Downloads/Pluralisght/skill-iq/batch.png",
+        "badgeUrl": "https://app.pluralsight.com/achievements/share/06cf9a96-f686-44d7-a0b6-160854a57d54"
+      },
+      {
+        "id": "ps-identity-deploy",
+        "title": "Identity, Deployment & Management",
+        "description": "AZ-900: Azure identity solutions, deployment tools, and management features.",
+        "image": "Downloads/Pluralisght/skill-iq/batch.png",
+        "badgeUrl": "https://app.pluralsight.com/achievements/share/aee76c7f-67d6-44b2-bcb5-ff32e6f25aaf"
+      },
+      {
+        "id": "ps-cloud-concepts",
+        "title": "Foundational Cloud Concepts",
+        "description": "AZ-900: Core cloud computing concepts, models, and terminology.",
+        "image": "Downloads/Pluralisght/skill-iq/batch.png",
+        "badgeUrl": "https://app.pluralsight.com/achievements/share/07535af4-384f-4dcc-a28b-18ec17dbd230"
+      }
+    ]
+  }
+}
