@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,15 +51,15 @@
             <div class="contact-info-section">
                 <div class="info-intro">
                     <h2 class="info-title">Get in Touch</h2>
-                    <p class="info-description" id="contact-description">
-                        I'm currently available for freelance projects, internships, and full-time
+                    <p class="info-description">
+                        I'm currently available for freelance projects, internships, and full-time 
                         opportunities in cloud computing, DevOps, and web development.
                     </p>
                 </div>
 
-                <div class="contact-methods" id="contact-methods">
-
-                    <a href="mailto:maxs4114@proton.me" class="contact-method" id="contact-email-link">
+                <div class="contact-methods">
+                    
+                    <a href="mailto:maxs4114@proton.me" class="contact-method">
                         <div class="method-icon">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                                 <rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -68,7 +68,7 @@
                         </div>
                         <div class="method-content">
                             <h3 class="method-label">Email</h3>
-                            <p class="method-value" id="contact-email-val">maxs4114@proton.me</p>
+                            <p class="method-value">maxs4114@proton.me</p>
                             <span class="method-status">Primary contact</span>
                         </div>
                         <div class="method-arrow">
@@ -78,9 +78,9 @@
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/max-simon-230757387/"
-                       target="_blank"
-                       class="contact-method" id="contact-linkedin-link">
+                    <a href="https://www.linkedin.com/in/max-simon-230757387/" 
+                       target="_blank" 
+                       class="contact-method">
                         <div class="method-icon">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                                 <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="method-content">
                             <h3 class="method-label">LinkedIn</h3>
-                            <p class="method-value" id="contact-linkedin-val">linkedin.com/in/max-simon-230757387</p>
+                            <p class="method-value">linkedin.com/in/max-simon-230757387</p>
                             <span class="method-status">Professional network</span>
                         </div>
                         <div class="method-arrow">
@@ -119,28 +119,28 @@
                         <div class="info-icon">🎓</div>
                         <div class="info-text">
                             <span class="info-key">Education</span>
-                            <span class="info-val" id="ci-education">BTS Cloud Computing</span>
+                            <span class="info-val">BTS Cloud Computing</span>
                         </div>
                     </div>
                     <div class="quick-info-item">
                         <div class="info-icon">📍</div>
                         <div class="info-text">
                             <span class="info-key">Location</span>
-                            <span class="info-val" id="ci-location">Luxembourg</span>
+                            <span class="info-val">Luxembourg</span>
                         </div>
                     </div>
                     <div class="quick-info-item">
                         <div class="info-icon">💼</div>
                         <div class="info-text">
                             <span class="info-key">Status</span>
-                            <span class="info-val" id="ci-availability">Available</span>
+                            <span class="info-val">Available</span>
                         </div>
                     </div>
                     <div class="quick-info-item">
                         <div class="info-icon">⏰</div>
                         <div class="info-text">
                             <span class="info-key">Response Time</span>
-                            <span class="info-val" id="ci-response">24 Hours</span>
+                            <span class="info-val">24 Hours</span>
                         </div>
                     </div>
                 </div>
@@ -171,11 +171,11 @@
                     <!-- Stats Cards -->
                     <div class="visual-stats">
                         <div class="mini-stat">
-                            <span class="mini-stat-value" id="ci-stat-certs">04</span>
+                            <span class="mini-stat-value">04</span>
                             <span class="mini-stat-label">Certifications</span>
                         </div>
                         <div class="mini-stat">
-                            <span class="mini-stat-value" id="ci-stat-projects">09</span>
+                            <span class="mini-stat-value">09</span>
                             <span class="mini-stat-label">Projects</span>
                         </div>
                     </div>
@@ -187,9 +187,9 @@
         <!-- Bottom CTA -->
         <section class="contact-cta">
             <div class="cta-content">
-                <h2 class="cta-title" id="ci-cta-title">Interested in working together?</h2>
-                <p class="cta-text" id="ci-cta-text">
-                    I'm always open to discussing new projects, creative ideas, or opportunities
+                <h2 class="cta-title">Interested in working together?</h2>
+                <p class="cta-text">
+                    I'm always open to discussing new projects, creative ideas, or opportunities 
                     to contribute to innovative cloud solutions.
                 </p>
                 <div class="cta-buttons">
@@ -265,26 +265,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/admin.js"></script>
     <script>
-        fetch('data/contact.json').then(r=>r.json()).then(c => {
-            const s = (id,v) => { const el=document.getElementById(id); if(el&&v) el.textContent=v; };
-            const a = (id,v) => { const el=document.getElementById(id); if(el&&v) el.setAttribute('href',v); };
-            s('contact-description', c.description);
-            s('contact-email-val', c.email);
-            s('contact-linkedin-val', c.linkedinHandle);
-            s('ci-education', c.education);
-            s('ci-location', c.location);
-            s('ci-availability', c.availability);
-            s('ci-response', c.responseTime);
-            s('ci-stat-certs', c.statsCertifications);
-            s('ci-stat-projects', c.statsProjects);
-            s('ci-cta-title', c.ctaTitle);
-            s('ci-cta-text', c.ctaText);
-            a('contact-email-link', c.email ? 'mailto:'+c.email : null);
-            a('contact-linkedin-link', c.linkedin);
-        });
-
         new QRCode(document.getElementById('linkedin-qr'), {
             text: 'https://www.linkedin.com/in/max-simon-230757387/',
             width: 140,
@@ -304,4 +285,3 @@
     </script>
 </body>
 </html>
-

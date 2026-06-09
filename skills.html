@@ -60,33 +60,287 @@
                 </label>
             </div>
 
-            <!-- Hard skills table rendered from data/hardskills.json -->
-            <div class="hardskills-table" id="hardskills-table">
+            <div class="hardskills-table">
+
                 <div class="hs-header">
                     <div class="hs-header-cell">Category</div>
-                    <div class="hs-header-cell">Tools &amp; Technologies</div>
+                    <div class="hs-header-cell">Tools & Technologies</div>
                     <div class="hs-header-cell">Related Projects</div>
                 </div>
-                <div id="hardskills-rows"></div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">📦</span>
+                        <span class="hs-name">Virtualization</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Open-source hypervisor for running VMs and containers on bare metal">Proxmox VE</span>
+                        <span class="hs-tag" data-tip="Free VM software by Oracle for running guest operating systems">VirtualBox</span>
+                        <span class="hs-tag" data-tip="Linux-based NAS operating system for network-attached storage">TrueNAS</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">💻</span>
+                        <span class="hs-name">Hardware</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag">Server Assembly</span>
+                        <span class="hs-tag" data-tip="Hardware that manages multiple disks as RAID arrays for redundancy or performance">RAID Controllers</span>
+                        <span class="hs-tag">Workstations</span>
+                        <span class="hs-tag" data-tip="Rack-mounted panel consolidating network cable connections in a server room">Patch Panels</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">☁️</span>
+                        <span class="hs-name">Cloud</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Microsoft's cloud platform offering VMs, storage, networking and managed services">Microsoft Azure</span>
+                        <span class="hs-tag" data-tip="CDN and DNS provider with DDoS protection and global edge network">Cloudflare</span>
+                        <span class="hs-tag" data-tip="German cloud and dedicated server hosting provider">Hetzner</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-azure" class="hs-project-link">Azure Meeting</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🔌</span>
+                        <span class="hs-name">Networking</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Cisco's network simulation tool for designing and testing network topologies">Cisco Packet Tracer</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
+                        <a href="projects.html#project-dfs" class="hs-project-link">DFS Workfolder</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🖥️</span>
+                        <span class="hs-name">Operating Systems</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag">Windows 10/11</span>
+                        <span class="hs-tag" data-tip="Microsoft server OS for managing users, files, AD and network services">Windows Server</span>
+                        <span class="hs-tag" data-tip="Headless Linux server OS used for hosting and infrastructure">Ubuntu Server</span>
+                        <span class="hs-tag">Ubuntu Desktop</span>
+                        <span class="hs-tag" data-tip="Proxmox VE used as the bare-metal OS for virtual infrastructure">Proxmox</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-dfs" class="hs-project-link">DFS Workfolder</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-truenas" class="hs-project-link">TrueNAS Server</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">⚙️</span>
+                        <span class="hs-name">Programming</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag">Python</span>
+                        <span class="hs-tag" data-tip="Command-line shells for scripting and automating system administration tasks">Bash / PowerShell</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-grading-dino" class="hs-project-link">Grading Dino</a>
+                        <a href="projects.html#project-python-monitor" class="hs-project-link">Python Monitor</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🌐</span>
+                        <span class="hs-name">Web Development</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag">HTML</span>
+                        <span class="hs-tag">CSS</span>
+                        <span class="hs-tag" data-tip="Server-side scripting language for building dynamic web applications">PHP</span>
+                        <span class="hs-tag">JavaScript</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-grading-dino" class="hs-project-link">Grading Dino</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-portfolio" class="hs-project-link">Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">📊</span>
+                        <span class="hs-name">Project Management</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Agile framework for iterative development using sprints and defined roles">Scrum</span>
+                        <span class="hs-tag" data-tip="Visual workflow method using boards and cards to manage tasks">Kanban</span>
+                        <span class="hs-tag" data-tip="Microsoft 365 task and project planning tool with board and list views">Microsoft Planner</span>
+                        <span class="hs-tag">Git</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-grading-dino" class="hs-project-link">Grading Dino</a>
+                        <a href="projects.html#project-lme" class="hs-project-link">LME</a>
+                        <a href="projects.html#project-azure" class="hs-project-link">Azure Meeting</a>
+                    </div>
+                </div>
+
+                <div class="hs-row">
+                    <div class="hs-label">
+                        <span class="hs-icon">🏢</span>
+                        <span class="hs-name">Microsoft 365</span>
+                    </div>
+                    <div class="hs-tags">
+                        <span class="hs-tag" data-tip="Microsoft suite of low-code tools for apps, automation and analytics">Power Platform</span>
+                        <span class="hs-tag" data-tip="Microsoft tool for building custom business apps without traditional coding">PowerApps</span>
+                        <span class="hs-tag" data-tip="Microsoft workflow automation tool for connecting apps and services">Power Automate</span>
+                    </div>
+                    <div class="hs-projects">
+                        <a href="projects.html#project-carnotes" class="hs-project-link">CarNotes</a>
+                        <a href="projects.html#project-dfs" class="hs-project-link">DFS Workfolder</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Certificates Section (rendered from data/certificates.json) -->
-        <section class="skills-section" id="section-certifications">
+        <!-- Certificates Section -->
+        <section class="skills-section">
             <div class="section-header">
                 <h2 class="section-title-large">Certifications</h2>
                 <p class="section-description">Professional Microsoft credentials and achievements</p>
             </div>
-            <div class="skills-layout" id="certs-grid"></div>
+
+            <div class="skills-layout">
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container">
+                            <img src="./certificates/azure fundamentals.png" alt="Azure Fundamentals" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Azure Fundamentals</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Foundation-level knowledge of cloud services and Microsoft Azure.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Microsoft Certified</span>
+                        <span class="cert-status active">Active</span>
+                    </div>
+                    <a href="https://www.credly.com/badges/d1020d9d-d9e6-474d-b1cf-090eae7f51d3/linked_in_profile"
+                       target="_blank"
+                       class="cert-view-link">
+                        View Credential →
+                    </a>
+                </div>
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container">
+                            <img src="./certificates/word1.png" alt="Word Associate" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Word Associate</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Expertise in Microsoft Word with Microsoft 365 Apps.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Microsoft Office Specialist</span>
+                        <span class="cert-date">Nov 2025 - Nov 2030</span>
+                    </div>
+                    <a href="https://www.credly.com/badges/d948da79-5839-4e60-9662-d44abba46877/linked_in_profile"
+                       target="_blank"
+                       class="cert-view-link">
+                        View Credential →
+                    </a>
+                </div>
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container">
+                            <img src="./certificates/powerpoint1.png" alt="PowerPoint Associate" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">PowerPoint Associate</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Proficiency in creating presentations using Microsoft PowerPoint.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Microsoft Office Specialist</span>
+                        <span class="cert-date">Oct 2025 - Oct 2030</span>
+                    </div>
+                    <a href="https://www.credly.com/badges/bc5e0ab9-c642-4708-bc90-c17e2b070f19/linked_in_profile"
+                       target="_blank"
+                       class="cert-view-link">
+                        View Credential →
+                    </a>
+                </div>
+
+                <div class="skill-category certificate-card">
+                    <div class="category-header">
+                        <div class="cert-image-container">
+                            <img src="./certificates/word2.png" alt="Word Expert" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Word Expert</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Advanced Microsoft Word expertise with Microsoft 365 Apps.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Microsoft Office Specialist</span>
+                        <span class="cert-status active">Active</span>
+                    </div>
+                    <a href="https://www.credly.com/badges/419b661e-2a8e-4f86-8172-75f500e02651"
+                       target="_blank"
+                       class="cert-view-link">
+                        View Credential →
+                    </a>
+                </div>
+
+            </div>
         </section>
 
         <!-- Attempted Certifications Section -->
-        <section class="skills-section" id="section-attempted">
+        <section class="skills-section">
             <div class="section-header">
                 <h2 class="section-title-large">Certification Journey</h2>
                 <p class="section-description">Attempted certifications and continuous learning efforts</p>
             </div>
-            <div class="skills-layout" id="certs-attempted-grid"></div>
+
+            <div class="skills-layout">
+
+                <div class="skill-category certificate-card attempted-cert">
+                    <div class="category-header">
+                        <div class="cert-image-container">
+                            <img src="./certificates/excel1.png" alt="Excel Associate" class="cert-badge-img">
+                        </div>
+                        <h3 class="category-title">Excel Associate</h3>
+                    </div>
+                    <div class="skill-description">
+                        <p>Microsoft Excel proficiency certification attempt.</p>
+                    </div>
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Microsoft Office Specialist</span>
+                        <span class="cert-status attempted">Attempted</span>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <!-- Pluralsight Section -->
@@ -296,7 +550,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/admin.js"></script>
     <script>
         // Tooltip hover toggle
         const tipCheck  = document.getElementById('tipCheck');
@@ -316,61 +569,6 @@
             colorLight: '#0A0E1A',
             correctLevel: QRCode.CorrectLevel.H
         });
-
-        // Load certificates from JSON
-        function certStatusHTML(cert) {
-            if (cert.status === 'active')   return `<span class="cert-status active">Active</span>`;
-            if (cert.status === 'attempted') return `<span class="cert-status attempted">Attempted</span>`;
-            return `<span class="cert-date">${cert.statusLabel}</span>`;
-        }
-        function certCard(cert) {
-            const attempted = cert.section === 'attempted';
-            const link = cert.credentialUrl
-                ? `<a href="${cert.credentialUrl}" target="_blank" class="cert-view-link">View Credential →</a>`
-                : '';
-            return `
-                <div class="skill-category certificate-card${attempted ? ' attempted-cert' : ''}">
-                    <div class="category-header">
-                        <div class="cert-image-container">
-                            <img src="${cert.image}" alt="${cert.title}" class="cert-badge-img">
-                        </div>
-                        <h3 class="category-title">${cert.title}</h3>
-                    </div>
-                    <div class="skill-description"><p>${cert.description}</p></div>
-                    <div class="cert-meta">
-                        <span class="cert-issuer">${cert.issuer}</span>
-                        ${certStatusHTML(cert)}
-                    </div>
-                    ${link}
-                </div>`;
-        }
-        // Load hard skills from JSON
-        fetch('data/hardskills.json')
-            .then(r => r.json())
-            .then(data => {
-                document.getElementById('hardskills-rows').innerHTML = data.skills.map(s => `
-                    <div class="hs-row" data-id="${s.id}">
-                        <div class="hs-label">
-                            <span class="hs-icon">${s.icon}</span>
-                            <span class="hs-name">${s.name}</span>
-                        </div>
-                        <div class="hs-tags">
-                            ${s.tags.map(t => `<span class="hs-tag"${t.tip?` data-tip="${t.tip}"`:''}>${t.label}</span>`).join('')}
-                        </div>
-                        <div class="hs-projects">
-                            ${s.projects.map(p => `<a href="${p.href}" class="hs-project-link">${p.label}</a>`).join('')}
-                        </div>
-                    </div>`).join('');
-            });
-
-        fetch('data/certificates.json')
-            .then(r => r.json())
-            .then(data => {
-                const main     = data.certificates.filter(c => c.section === 'certifications');
-                const attempted = data.certificates.filter(c => c.section === 'attempted');
-                document.getElementById('certs-grid').innerHTML          = main.map(certCard).join('');
-                document.getElementById('certs-attempted-grid').innerHTML = attempted.map(certCard).join('');
-            });
     </script>
 </body>
 </html>
