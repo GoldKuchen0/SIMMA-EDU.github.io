@@ -41,6 +41,34 @@
     --shadow-glow: 0 0 20px rgba(0, 255, 163, 0.3);
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+::selection {
+    background: rgba(0, 255, 163, 0.25);
+    color: var(--color-text);
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -1381,7 +1409,7 @@ body {
 
 .hs-header {
     display: grid;
-    grid-template-columns: 220px 1fr 180px;
+    grid-template-columns: minmax(140px, 220px) 1fr minmax(120px, 180px);
     border-bottom: 2px solid var(--color-primary);
     background: var(--color-surface);
 }
@@ -1401,7 +1429,7 @@ body {
 
 .hs-row {
     display: grid;
-    grid-template-columns: 220px 1fr 180px;
+    grid-template-columns: minmax(140px, 220px) 1fr minmax(120px, 180px);
     align-items: stretch;
     border-bottom: 1px solid var(--color-border);
     min-height: 56px;
@@ -2533,55 +2561,34 @@ body {
     color: var(--color-primary);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+@media (max-width: 640px) {
+    .hs-header {
+        display: none;
+    }
 
-.footer {
-    background: var(--color-surface);
-    border-top: 1px solid var(--color-border);
-    padding: var(--spacing-lg);
-}
+    .hs-row {
+        grid-template-columns: 1fr;
+        border-bottom: 2px solid var(--color-border);
+        min-height: unset;
+    }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .hs-label {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+        background: var(--color-surface);
+    }
 
-.footer-left {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    color: var(--color-text-dim);
-}
+    .hs-tags {
+        padding: 0.6rem 1rem;
+    }
 
-.footer-right {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-}
-
-.footer-link {
-    color: var(--color-text-dim);
-    text-decoration: none;
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    transition: var(--transition);
-}
-
-.footer-link:hover {
-    color: var(--color-primary);
-}
-
-.footer-status {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-text-dim);
+    .hs-projects {
+        border-left: none;
+        border-top: 1px solid var(--color-border);
+        padding: 0.6rem 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 /* ============================================
@@ -2638,13 +2645,11 @@ body {
     .hero-visual {
         display: none;
     }
-    
+
     .contact-layout {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 1024px) {
     .skills-layout {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -2971,6 +2976,8 @@ body {
 
 .home-section-alt {
     background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .home-section-inner {
@@ -3292,5 +3299,44 @@ body {
     .home-section-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/* ============================================
+   MOBILE NAV OVERFLOW
+   ============================================ */
+
+@media (max-width: 768px) {
+    .nav-system {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .nav-links {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex-shrink: 1;
+        padding-bottom: 2px;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
     }
 }
