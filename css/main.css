@@ -812,6 +812,32 @@ body {
     border: 3px solid var(--color-border);
 }
 
+/* Semester Tab System */
+.sem-tab {
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition);
+}
+
+.sem-tab:hover .milestone-marker {
+    box-shadow: 0 0 0 5px rgba(0, 255, 163, 0.12);
+}
+
+.sem-tab-active .milestone-marker {
+    background: var(--color-primary) !important;
+    color: var(--color-bg) !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: var(--shadow-glow);
+}
+
+.sem-tab-active .milestone-content h3 {
+    color: var(--color-primary);
+}
+
+.sem-hidden {
+    display: none !important;
+}
+
 .milestone-content h3 {
     font-size: 0.9rem;
     font-weight: 600;

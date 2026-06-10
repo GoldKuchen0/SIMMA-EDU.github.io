@@ -46,19 +46,19 @@
     <!-- Goal Detail Container -->
     <main class="goal-detail-container">
 
-        <!-- Progress Section -->
+        <!-- Semester Tab Bar -->
         <section class="progress-section">
             <h2 class="section-title">Progress Overview</h2>
             <div class="milestone-path">
-                <div class="milestone completed">
+                <div class="milestone completed sem-tab" data-sem="1">
                     <div class="milestone-marker">✓</div>
                     <div class="milestone-content">
                         <h3>Semester 1</h3>
                         <p class="milestone-status">Completed</p>
                     </div>
                 </div>
-                <div class="milestone-line"></div>
-                <div class="milestone completed">
+                <div class="milestone-line active"></div>
+                <div class="milestone upcoming active sem-tab" data-sem="2">
                     <div class="milestone-marker">▶</div>
                     <div class="milestone-content">
                         <h3>Semester 2</h3>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="milestone-line"></div>
-                <div class="milestone future">
+                <div class="milestone future sem-tab" data-sem="3">
                     <div class="milestone-marker">3</div>
                     <div class="milestone-content">
                         <h3>Semester 3</h3>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="milestone-line"></div>
-                <div class="milestone future">
+                <div class="milestone future sem-tab" data-sem="4">
                     <div class="milestone-marker">4</div>
                     <div class="milestone-content">
                         <h3>Semester 4</h3>
@@ -84,9 +84,12 @@
             </div>
         </section>
 
-        <!-- Learning Section -->
-        <section class="learning-section">
-            <h2 class="section-title">What I've Learned (Semester 1)</h2>
+        <!-- ═══════════════════════════════════════
+             SEMESTER 1
+             ═══════════════════════════════════════ -->
+
+        <section class="learning-section" data-semester="1">
+            <h2 class="section-title">What I've Learned</h2>
             <div class="learning-grid">
                 <div class="learning-card">
                     <div class="learning-icon"></div>
@@ -145,9 +148,8 @@
             </div>
         </section>
 
-        <!-- Semester 1 Result Section -->
-        <section class="challenges-section">
-            <h2 class="section-title">Semester 1 – Result</h2>
+        <section class="challenges-section" data-semester="1">
+            <h2 class="section-title">Result</h2>
             <div class="challenges-grid">
                 <div class="challenge-card">
                     <div class="challenge-number">✓</div>
@@ -157,42 +159,38 @@
             </div>
         </section>
 
-        <!-- Self-Reflection Section -->
-        <section class="challenges-section">
-            <h2 class="section-title">Semester 1 – Self-Reflection</h2>
-
+        <section class="challenges-section" data-semester="1">
+            <h2 class="section-title">Self-Reflection</h2>
             <div class="challenges-grid">
-
                 <div class="challenge-card">
                     <div class="challenge-number"></div>
                     <h3>Public Speaking</h3>
                     <p>At the beginning of the semester, holding presentations was genuinely difficult for me. I was quite shy and felt a lot of anxiety standing in front of an audience. Over the course of the semester I pushed through that discomfort and my confidence has improved noticeably — something I'm proud of.</p>
                 </div>
-
                 <div class="challenge-card">
                     <div class="challenge-number"></div>
                     <h3>Team Communication</h3>
                     <p>My ability to communicate and coordinate within a team has grown significantly. The TrueNAS Scale project was a clear step forward compared to the Grading Dino project — collaboration was more structured and efficient. That said, there is still room to improve: I need to make better use of planning tools like Microsoft Planner and Git to keep the whole team properly aligned.</p>
                 </div>
-
                 <div class="challenge-card">
                     <div class="challenge-number"></div>
                     <h3>Problem-Solving Mindset</h3>
                     <p>One of the most valuable lessons this semester was learning to dig into problems rather than work around them. Instead of switching to an easier path when something doesn't work, I now try to understand the root cause and find a proper solution. This shift in mindset has made me a more reliable and thorough technician.</p>
                 </div>
-
                 <div class="challenge-card">
                     <div class="challenge-number"></div>
                     <h3>Looking Ahead</h3>
                     <p>I'm genuinely looking forward to Semester 2 and the projects it will bring — especially working more with Proxmox and deeper infrastructure topics. The first semester built a solid foundation and I feel ready to take on more complex challenges.</p>
                 </div>
-
             </div>
         </section>
 
-        <!-- Semester 2 Goals Section -->
-        <section class="challenges-section">
-            <h2 class="section-title">Semester 2 – Goals</h2>
+        <!-- ═══════════════════════════════════════
+             SEMESTER 2
+             ═══════════════════════════════════════ -->
+
+        <section class="challenges-section" data-semester="2">
+            <h2 class="section-title">Goals</h2>
             <div class="challenges-grid">
                 <div class="challenge-card">
                     <div class="challenge-number">01</div>
@@ -206,6 +204,73 @@
                 </div>
             </div>
         </section>
+
+        <section class="learning-section" data-semester="2">
+            <h2 class="section-title">What I've Learned</h2>
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <div class="learning-icon"></div>
+                    <h3>Project Management Methods</h3>
+                    <ul>
+                        <li>OKR (Objectives and Key Results) — goal-oriented frameworks</li>
+                        <li>KPI (Key Performance Indicators) — measuring progress toward goals</li>
+                        <li>Milestones — marking key progress points in a project plan</li>
+                        <li>GTD (Getting Things Done) — task organization and prioritization</li>
+                        <li>GitHub Planning — managing work items and project boards on GitHub</li>
+                    </ul>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon"></div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <ul>
+                        <li>Azure compute resources — deploying and managing VMs and services</li>
+                        <li>Azure identity & governance — RBAC, policies, and AD management</li>
+                        <li>AWS infrastructure fundamentals (workshop with Charlier Arnaud)</li>
+                        <li>High Availability in VMware and Proxmox</li>
+                    </ul>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon"></div>
+                    <h3>Kubernetes & Containers</h3>
+                    <ul>
+                        <li>K3s (lightweight Kubernetes) on Raspberry Pi 5 cluster</li>
+                        <li>Load balancer setup and traffic routing with K3s</li>
+                    </ul>
+                </div>
+                <!-- TODO: add more cards as Semester 2 progresses -->
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SEMESTER 3
+             ═══════════════════════════════════════ -->
+
+        <section class="challenges-section" data-semester="3">
+            <h2 class="section-title">Coming Soon</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-number">—</div>
+                    <h3>Semester 3 starts in 2026</h3>
+                    <p>Content for Semester 3 will be added once the semester begins. Check back later.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SEMESTER 4
+             ═══════════════════════════════════════ -->
+
+        <section class="challenges-section" data-semester="4">
+            <h2 class="section-title">Coming Soon</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-number">—</div>
+                    <h3>Semester 4 starts in 2027</h3>
+                    <p>Content for Semester 4 will be added once the semester begins. Check back later.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -276,6 +341,20 @@
             colorLight: '#0A0E1A',
             correctLevel: QRCode.CorrectLevel.H
         });
+
+        // Semester tab filter
+        const semTabs = document.querySelectorAll('.sem-tab');
+        const semSections = document.querySelectorAll('[data-semester]');
+
+        function activateSemester(sem) {
+            semTabs.forEach(t => t.classList.toggle('sem-tab-active', t.dataset.sem === sem));
+            semSections.forEach(s => s.classList.toggle('sem-hidden', s.dataset.semester !== sem));
+        }
+
+        semTabs.forEach(tab => tab.addEventListener('click', () => activateSemester(tab.dataset.sem)));
+
+        // Default: Semester 1
+        activateSemester('1');
     </script>
 </body>
 </html>
