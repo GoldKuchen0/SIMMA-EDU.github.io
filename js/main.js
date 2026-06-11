@@ -1,4 +1,36 @@
 // ============================================
+// HAMBURGER NAV TOGGLE
+// ============================================
+
+(function () {
+    const hamburger = document.getElementById('navHamburger');
+    const nav = document.querySelector('.nav-system');
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('nav-open');
+            const isOpen = nav.classList.contains('nav-open');
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close nav when a link is clicked (mobile UX)
+        nav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target)) {
+                nav.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+})();
+
+// ============================================
 // CV DOWNLOAD MODAL
 // ============================================
 
